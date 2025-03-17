@@ -1,8 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000814;
+  --foreground: #ededed;
+
+  /*--background: #ffffff;*/
+  /*--foreground: #171717;*/
+
+      /*--background: #0A0A0A;*/
+
 }
 
 @theme inline {
@@ -12,15 +18,85 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+  --color-primary-1: #000814;
+  --color-primary-2: #001d3d;
+  --color-primary-3: #003566;
+  --color-primary-4: #4C78AA;
+  --color-secondary-1: #ffc300;
+  --color-secondary-2: #ffd60a;
+
+
+  --color-dark-0: #0A0A0A;
+  --color-dark-800: #121212;
+  --color-dark-700: #1F1F1F;
+  --color-dark-600: #292929;
+  --color-dark-500: #333333;
+
+  --color-light_1: #F8F9FA;
+  --color-light_2: #E9ECEF;
+  --color-light_3: #DEE2E6;
+  --color-light_4: #CED4DA;
+  --color-light_5: #ADB5BD;
+
+  --color-darkBlue-0: #000814;
+  --color-darkBlue-1: #000C1E;
+  --color-darkBlue-2: #001029;
+  --color-darkBlue-3: #002966;
+
+  /*--color-dark-0: #0A0A0A; !* Deep Black (Primary Background) *!*/
+  --color-dark-1: #1E1E1E; /* Charcoal Gray (Secondary Background) */
+  --color-dark-2: #292929; /* Dark Gray (Further Depth) */
+  --color-dark-3: #333333; /* Softer Dark Gray */
+  --color-dark-4: #3D3D3D; /* Slightly Lighter Gray */
+
+  --color-accent-100: #E63946; /* Crimson Red (Primary Accent) */
+  --color-accent-1: #F4A261; /* Warm Orange (Secondary Accent) */
+  --color-accent-2: #003566; /* Muted Blue (Links, Hover) */
+  --color-accent-3: #2A9D8F; /* Teal Green (Success) */
+  --color-accent-4: #E9C46A; /* Golden Yellow (Warning) */
+
+  --color-text_0: #F8F9FA; /* Off-White (Primary Text) */
+  --color-text_1: #D6D6D6; /* Soft Light Gray (Secondary Text) */
+  --color-text_2: #A0A0A0; /* Muted Gray (Less Emphasis) */
+  --color-border: #6C757D; /* Border and Divider Color */
+  --color-error: #D62828; /* Strong Red (Errors, Dangers) */
+
+
+
+}
+
+/*@media (prefers-color-scheme: dark) {*/
+/*  :root {*/
+/*    --background: #0a0a0a;*/
+/*    --foreground: #ededed;*/
+/*  }*/
+/*}*/
+
+.spotlight-cursor {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: background 0.1s ease-out;
+}
+
+.nav-indicator {
+  /*height: 20px;*/
+  /*border: 1px solid;*/
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-roboto), Arial, Helvetica, sans-serif;
+  /*font-family: var(--font-roboto), Arial, sans-serif;*/
+
 }
