@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Roboto } from "next/font/google";
+import Head from 'next/head'
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,6 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Benollomo Portfolio",
   description: "",
+
 };
 
 const roboto = Roboto({
@@ -27,12 +29,15 @@ const roboto = Roboto({
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased ${roboto.variable}`}
+      <html lang="en">
+      <Head>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      </Head>
+      <body style={{maxWidth: "100%", width: "auto"}}
+          className={`${geistSans.variable} ${geistMono.variable} antialiased ${roboto.variable}`}
       >
-        {children}
+      {children}
       </body>
-    </html>
+      </html>
   );
 }

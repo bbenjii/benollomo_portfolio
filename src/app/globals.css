@@ -4,6 +4,7 @@
   --background: #000814;
   --foreground: #ededed;
 
+
   /*--background: #ffffff;*/
   /*--foreground: #171717;*/
 
@@ -99,4 +100,9 @@ body {
   font-family: var(--font-roboto), Arial, Helvetica, sans-serif;
   /*font-family: var(--font-roboto), Arial, sans-serif;*/
 
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
 }
