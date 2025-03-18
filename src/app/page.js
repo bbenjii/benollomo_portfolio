@@ -405,7 +405,7 @@ export default function Home() {
                                     )
                                 })
                             }
-                            <Link href={"/resume"} target="_blank" rel="noopener noreferrer">
+                            <Link href={"/resume.pdf"} target="_blank" rel="noopener noreferrer">
                             <span
                                 className="flex group w-fit items-center gap-2 mt-4 lg:mt-0 lg:ml-10 text-lg font-bold cursor-pointer font-bold text-white hover:text-primary-4">
                                 {headers.view_resume}
