@@ -83,6 +83,7 @@ export default function ChatbotWidget() {
 
         }
         else{
+            updated_messages = [...messages]
             updated_messages.push({role: "user", text: new_message})
             setMessages(updated_messages)
 
