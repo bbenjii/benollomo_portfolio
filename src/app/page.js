@@ -1,29 +1,48 @@
 "use client";
-import {Switch} from '@headlessui/react'
-import {ExternalLink} from 'lucide-react';
-
-import Image from 'next/image';
 import {useEffect, useRef, useState} from "react";
-import CustomCursor from '../components/customCursor';
-import Link from 'next/link'
-import {info_translations, headers_translations} from "@/utils/profile_info";
-import ChatbotWidget from '../components/chatbotWidget'
-export default function Home() {
+import {Switch} from "@headlessui/react";
+import {ExternalLink} from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import CustomCursor from "../components/customCursor";
+import ChatbotWidget from "../components/chatbotWidget";
+import {headers_translations, info_translations} from "@/utils/profile_info";
 
+export default function Home() {
+    const [frenchMode, setFrenchMode] = useState(false);
     const [info, setInfo] = useState(info_translations.english);
     const [headers, setHeaders] = useState(headers_translations.english);
-
-
     const [activeSection, setActiveSection] = useState("");
-    const [frenchMode, setFrenchMode] = useState(false);
-
-    // Refs for container and each section
+    const [loading, setLoading] = useState(true);
     const containerRef = useRef(null);
     const aboutRef = useRef(null);
     const experienceRef = useRef(null);
     const projectsRef = useRef(null);
     const interestsRef = useRef(null);
-    // Scroll handler to determine which section is closest to the container top
+
+    // On mount: read from localStorage
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            const preferredLang = localStorage.getItem("preferred_language");
+            setFrenchMode(preferredLang === "fr");
+        }
+        setLoading(false)
+
+    }, []);
+
+    // On frenchMode change: update content + localStorage
+    useEffect(() => {
+        if (frenchMode) {
+            setInfo(info_translations.french);
+            setHeaders(headers_translations.french);
+            localStorage.setItem("preferred_language", "fr");
+        } else {
+            setInfo(info_translations.english);
+            setHeaders(headers_translations.english);
+            localStorage.setItem("preferred_language", "en");
+        }
+    }, [frenchMode]);
+
     const handleScroll = () => {
         if (!containerRef.current) return;
         const containerTop = containerRef.current.getBoundingClientRect().top;
@@ -52,43 +71,28 @@ export default function Home() {
         setActiveSection(closestSection);
     };
 
-    const switchLanguage = () => {
-        if(frenchMode){
-            setInfo(info_translations.french)
-            setHeaders(headers_translations.french)
-        }
-        else{
-            setInfo(info_translations.english)
-            setHeaders(headers_translations.english)
-
-        }
-    }
-
     useEffect(() => {
-        switchLanguage()
-    }, [frenchMode])
-
-    useEffect(() => {
-        switchLanguage()
         const container = containerRef.current;
         if (!container) return;
         container.addEventListener("scroll", handleScroll);
-        // Set initial active section
         handleScroll();
         return () => {
             container.removeEventListener("scroll", handleScroll);
         };
     }, []);
 
-    // Function to scroll the container to the desired section
     const scrollToSection = (sectionRef) => {
         if (sectionRef.current) {
             sectionRef.current.scrollIntoView({behavior: "smooth", block: "start"});
         }
     };
 
+    // Everything else remains the same...
+
     return (
         <div className="h-screen w-screen overscroll-none flex m-0 ">
+            {
+                !loading && <>
             <div className={"collapse lg:visible"}>
                 <CustomCursor/>
             </div>
@@ -279,6 +283,7 @@ export default function Home() {
 
                 </div>
             </div>
+                </>}
         </div>
     );
 }

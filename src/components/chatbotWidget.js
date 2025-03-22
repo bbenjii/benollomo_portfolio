@@ -16,7 +16,7 @@ export default function ChatbotWidget() {
     const lastMessageRef = useRef(null);
 
     useEffect(() => {
-        handleSendMessage(null, "", true)
+        // handleSendMessage(null, "", true)
     }, [])
 
     useEffect(() => {
@@ -77,7 +77,10 @@ export default function ChatbotWidget() {
         setTypedMessage("")
 
         if(first_message){
-            updated_messages.push({role: "user", text: "write your introduction message!"})
+            const intro_text = localStorage.getItem("preferred_language") === "en" ?
+                "write your introduction message! "
+                : "ecris ton message d'introduction!"
+            updated_messages.push({role: "user", text: intro_text})
 
             const response = await sendMessage(updated_messages)
             updated_messages = [{role: "model", text: response}]
@@ -133,7 +136,12 @@ export default function ChatbotWidget() {
                 !isOpened &&
                 <div
                     className={"bg-primary-1 cursor-pointer p-3 border-white/60 border rounded-full animate-bounce lgd:animate-none lg:hover:animate-bounce"}
-                    onClick={() => setIsOpened(true)}>
+                    onClick={() => {
+                        if(messages.length === 0) {
+                            handleSendMessage(null, "", true)
+                        }
+                        setIsOpened(true)
+                    }}>
                     <BotMessageSquare className={"size-6 z-50 "}/>
                 </div>
             }
