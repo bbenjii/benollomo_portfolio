@@ -170,7 +170,7 @@ export default function Home() {
 
                 <div
                     ref={containerRef}
-                    className="flex flex-col lg:w-4/7 lg:py-30 gap-10 lg:gap-30 flex-nowrap lg:overflow-hidden lg:overflow-y-auto no-scrollbar"
+                    className="flex flex-col lg:w-4/7 lg:py-30 gap-10 lg:gap-30 flex-nowrap lg:overflow-hidden lg:overflow-y-auto no-scrollbar no-scroll"
                     id="mainContainer"
                 >
 

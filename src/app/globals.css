@@ -64,9 +64,13 @@
   --color-error: #D62828; /* Strong Red (Errors, Dangers) */
 
 
-
 }
 
+.no-scroll {
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+}
 /*@media (prefers-color-scheme: dark) {*/
 /*  :root {*/
 /*    --background: #0a0a0a;*/
@@ -92,6 +96,8 @@
 
 .no-scrollbar::-webkit-scrollbar {
   display: none;
+  appearance: none;
+  background: transparent;
 }
 
 body {

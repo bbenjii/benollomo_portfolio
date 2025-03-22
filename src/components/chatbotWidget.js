@@ -68,6 +68,8 @@ export default function ChatbotWidget() {
             }
         }
 
+        if(new_message.trim()==="" && first_message === false) {return}
+
 
         if(messageSending) return;
         setMessageSending(true);
@@ -83,6 +85,7 @@ export default function ChatbotWidget() {
 
         }
         else{
+
             updated_messages = [...messages]
             updated_messages.push({role: "user", text: new_message})
             setMessages(updated_messages)
