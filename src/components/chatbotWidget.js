@@ -5,7 +5,10 @@ import {useEffect, useRef, useState} from "react";
 import {info_translations, headers_translations, chatbot_system_instructions} from "@/utils/profile_info";
 import Markdown from "react-markdown";
 
-const GEMINI_API_KEY = "AIzaSyDcq9gfLMQpeODbWDA2jMtJAexzNBf952A"
+const GEMINI_API_KEY = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
+// const GEMINI_API_KEY = "AIzaSyDcq9gfLMQpeODbWDA2jMtJAexzNBf952A"
+
+
 export default function ChatbotWidget() {
     const [isOpened, setIsOpened] = useState(false);
     const [messages, setMessages] = useState([
@@ -109,7 +112,6 @@ export default function ChatbotWidget() {
 
 
     async function sendMessage(message_history = []) {
-
 
         const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`;
         const method = "POST";
