@@ -13,7 +13,7 @@ export const info_translations = {
                 company: "XPENS.AI",
                 date: "September 2024 - April 2025",
                 location: "Montréal, QC",
-                description: "Worked as a python and react developer for xpens ai. I Was tasked with refactoring pages, improving their UI and UX along with code readibility. I implemented new features, such as a brand new Workflow management system, and a Automatic Learning Algorithm",
+                description: "As a Full-Stack Developer Intern at XPENS.AI, I designed and delivered new features across the platform using React, Python, and MongoDB. I independently led the complete redesign of key modules, including the invoice workflow system, improving both scalability and user experience. I also developed and presented a client-facing API SDK to support external integrations, while collaborating closely with the development team and leadership to align technical solutions with business goals.",
                 technology:[
                     "javascript",
                     "python",
@@ -98,7 +98,7 @@ export const info_translations = {
                 "company": "XPENS.AI",
                 "date": "Septembre 2024 - Avril 2025",
                 "location": "Montréal, QC",
-                "description": "J'ai travaillé en tant que développeur Python et React chez XPENS.AI. J'ai été chargé de refactoriser des pages, d'améliorer leur interface utilisateur (UI) et leur expérience utilisateur (UX), ainsi que la lisibilité du code. J'ai également mis en œuvre de nouvelles fonctionnalités, notamment un tout nouveau système de gestion des flux de travail et un algorithme d'apprentissage automatique.",
+                "description": "En tant que stagiaire Développeur Full-Stack chez XPENS.AI, j’ai conçu et développé de nouvelles fonctionnalités sur l’ensemble de la plateforme en utilisant React, Python et MongoDB. J’ai dirigé de manière autonome la refonte complète de modules clés, notamment le système de workflow de factures, en améliorant la scalabilité et l’expérience utilisateur. J’ai également développé et présenté un SDK API destiné aux clients pour faciliter les intégrations externes, tout en collaborant étroitement avec l’équipe de développement et la direction afin d’aligner les solutions techniques sur les objectifs stratégiques de l’entreprise.",
                 "technology": [
                     "JavaScript",
                     "Python",
