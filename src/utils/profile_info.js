@@ -26,6 +26,19 @@ export const info_translations = {
         ],
         projects: [
             {
+                "title": "Sign Language Translator Glove",
+                "description": "Developed a wearable technology and mobile application system that translates sign language gestures into real-time text and speech. Built the smart glove using flex sensors and an ESP32 microcontroller, enabling wireless data transmission via Bluetooth to an Android app. Implemented a machine learning model (TensorFlow Lite) to classify gestures with over 85% accuracy, enhancing accessibility for Deaf and hard-of-hearing individuals. Worked collaboratively in a team of five, covering hardware integration, app development, and ethical design considerations.",
+                "github_link": "https://github.com/bbenjii/Sign-Language-Translator-Glove",
+                "image": "",
+                "technology": [
+                    "java",
+                    "python",
+                    "c++",
+                    "android",
+                    "tensorflow",
+                ]
+            },
+            {
                 title: "Sustainable City Carpooling Platform",
                 description: "Developed a carpooling web app for PolyHacks 2024, focusing on sustainable urban mobility. Led the database design using MongoDB Atlas, managing user authentication with Auth0 for a seamless login experience. Implemented JavaScript-based matching algorithms to optimize user connections and enhance ride-sharing efficiency. Worked in a team of three, demonstrating strong collaboration and problem-solving skills throughout the project.",
                 github_link: "https://github.com/bbenjii/Polyhacks2024",
@@ -110,6 +123,19 @@ export const info_translations = {
             }
         ],
         "projects": [
+            {
+                "title": "Gant Traducteur de Langue des Signes",
+                "description": "Développement d'un système combinant technologie portable et application mobile pour traduire les gestes de la langue des signes en texte et parole en temps réel. Conception d'un gant intelligent équipé de capteurs de flexion et d'un microcontrôleur ESP32, transmettant les données sans fil via Bluetooth vers une application Android. Implémentation d'un modèle d'apprentissage automatique (TensorFlow Lite) permettant de classifier les gestes avec une précision de plus de 85%, afin de renforcer l'accessibilité pour les personnes sourdes ou malentendantes. Projet réalisé en équipe de cinq, couvrant l'intégration matérielle, le développement logiciel et les considérations éthiques.",
+                "github_link": "https://github.com/bbenjii/Sign-Language-Translator-Glove",
+                "image": "",
+                "technology": [
+                    "java",
+                    "python",
+                    "c++",
+                    "android",
+                    "tensorflow",
+                ]
+            },
             {
                 "title": "Plateforme de Covoiturage Urbain Durable",
                 "description": "Développement d'une application web de covoiturage pour PolyHacks 2024, axée sur la mobilité urbaine durable. J'ai dirigé la conception de la base de données avec MongoDB Atlas et géré l'authentification des utilisateurs via Auth0 pour une expérience de connexion fluide. J'ai également implémenté des algorithmes de mise en relation en JavaScript afin d’optimiser les connexions entre utilisateurs. Projet réalisé en équipe de trois, mettant en avant la collaboration et la résolution de problèmes.",

@@ -254,7 +254,7 @@ export default function Home() {
                                             <span
                                                 className={"font-bold text-white group-hover:text-primary-4"}>{`${project.title}`}</span>
                                                 <span className={""}>{project.description}</span>
-                                                <div className={"flex gap-4 flex-wrap lg:flex-nowrap"}>
+                                                <div className={"flex gap-4 flex-wrap "}>
                                                     {project.technology.map((technology, index) => {
                                                         return (
                                                             <div key={`project-${index}`}
