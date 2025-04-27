@@ -102,7 +102,7 @@ export const info_translations = {
         "fullName": "Benjamin Ollomo",
         "firstName": "Ben",
         "lastName": "Ollomo",
-        "title": "Étudiant en génie informatique",
+        "title": "Étudiant Génie Informatique",
         "headline": "Je suis un futur ingénieur logiciel, passionné par la création de logiciels et de modèles.",
         "bio": "Je suis Benjamin, un ingénieur logiciel et un passionné de technologie, animé par le désir de créer des solutions innovantes. Mon expérience couvre le développement logiciel, les chatbots basés sur l'IA et les applications web full-stack. Actuellement, je perfectionne mes compétences en Next.js en travaillant sur divers projets, y compris une plateforme SaaS de chatbot intégrant l'IA pour améliorer les flux de travail en entreprise.\n\nAu-delà du développement logiciel, j’ai un vif intérêt pour les arts martiaux, la photographie et les nouvelles technologies. Mon entreprise de photographie couvre des événements en direct tels que des concerts et des soirées de lancement, alliant mes passions techniques et artistiques. Je pratique également le Jiu-Jitsu et le Muay Thai, équilibrant ainsi la discipline physique avec mes projets technologiques.\n\nToujours avide d’apprendre, d’explorer de nouveaux défis et de collaborer sur des projets à fort impact, je m'efforce d'apporter créativité et précision à tout ce que je fais. Que ce soit pour optimiser des modèles d’IA, concevoir des systèmes efficaces ou capturer des instants à travers un objectif, je suis prêt à relever de nouveaux défis. Connectons-nous et bâtissons ensemble quelque chose d’exceptionnel !",
         "experiences": [
