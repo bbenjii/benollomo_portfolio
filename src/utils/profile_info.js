@@ -36,7 +36,8 @@ export const info_translations = {
                     "c++",
                     "android",
                     "tensorflow",
-                ]
+                ],
+                images:["/project-sign-language-1.jpg"]
             },
             {
                 title: "Sustainable City Carpooling Platform",
@@ -134,7 +135,9 @@ export const info_translations = {
                     "c++",
                     "android",
                     "tensorflow",
-                ]
+                ],
+                images:["/project-sign-language-1"]
+
             },
             {
                 "title": "Plateforme de Covoiturage Urbain Durable",
