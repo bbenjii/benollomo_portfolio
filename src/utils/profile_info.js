@@ -11,17 +11,17 @@ export const info_translations = {
             {
                 title: "Software Developer Intern",
                 company: "XPENS.AI",
-                date: "September 2024 - April 2025",
+                date: "September 2024 - September 2025",
                 location: "Montréal, QC",
-                description: "As a Full-Stack Developer Intern at XPENS.AI, I designed and delivered new features across the platform using React, Python, and MongoDB. I independently led the complete redesign of key modules, including the invoice workflow system, improving both scalability and user experience. I also developed and presented a client-facing API SDK to support external integrations, while collaborating closely with the development team and leadership to align technical solutions with business goals.",
-                technology:[
-                    "javascript",
-                    "python",
-                    "flask",
-                    "react",
-                    "mongoDB",
-                    "unittest"
-                ]
+                description: "Worked as a Full-Stack Developer at XPENS.AI, delivering features with React, Python (FastAPI), MongoDB, and Google Cloud. Key contributions include building a workflow automation system for invoice processing, developing APIs and an SDK for external integrations, and creating a Redacted Image Service, an API capable of processing invoice PDFs to crop and extract components such as headers and line items.",
+                "technology": [
+                    "Python",
+                    "Flask",
+                    "React",
+                    "MongoDB",
+                    "Google Cloud"
+                ],
+                images:["/xpens_banner.png"]
             }
         ],
         projects: [
@@ -65,17 +65,6 @@ export const info_translations = {
                 ]
             },
             {
-                title: "Breast Cancer Prediction",
-                description: "Developed a predictive model to diagnose breast cancer using k-trees and ball-trees algorithms, improving accuracy in identifying cancerous cells. Processed and analyzed 700 patient cell samples to train the model, implementing the solution in Java. Gained hands-on experience in machine learning and data analysis through the project.",
-                github_link: "https://github.com/bbenjii/COEN352-Breast-Cancer-Diagnosis-Model",
-                image: "",
-                technology: [
-                    "Data Science",
-                    "ML",
-                    "Java",
-                ]
-            },
-            {
                 title: "Portfolio Website",
                 description: "Designed and deployed a personal portfolio website showcasing projects and technical skills. Leveraged AWS S3 for hosting and used Bootstrap for a responsive design, ensuring optimal viewing across different devices. Focused on frontend development and cloud deployment to create an efficient and visually appealing site.",
                 github_link: "https://github.com/bbenjii/portfolio",
@@ -86,17 +75,6 @@ export const info_translations = {
                     "react"
                 ]
             },
-            {
-                title: "Sudoku Game",
-                description: "Built a dynamic Sudoku puzzle generator using a backtracking algorithm, ensuring solvable and challenging 9x9 grids. Designed an interactive and user-friendly interface using Python’s Pygame framework. Strengthened problem-solving and programming skills by implementing efficient algorithms for game logic.",
-                github_link: "https://github.com/bbenjii/Sudoku-Game",
-                image: "",
-                technology: [
-                    "UI",
-                    "Python ",
-                    "Pygame"
-                ]
-            }
         ]
     },
     french:{
@@ -110,17 +88,18 @@ export const info_translations = {
             {
                 "title": "Stagiaire Développeur Logiciel",
                 "company": "XPENS.AI",
-                "date": "Septembre 2024 - Avril 2025",
+                "date": "Septembre 2024 - Septembre 2025",
                 "location": "Montréal, QC",
-                "description": "En tant que stagiaire Développeur Full-Stack chez XPENS.AI, j’ai conçu et développé de nouvelles fonctionnalités sur l’ensemble de la plateforme en utilisant React, Python et MongoDB. J’ai dirigé de manière autonome la refonte complète de modules clés, notamment le système de workflow de factures, en améliorant la scalabilité et l’expérience utilisateur. J’ai également développé et présenté un SDK API destiné aux clients pour faciliter les intégrations externes, tout en collaborant étroitement avec l’équipe de développement et la direction afin d’aligner les solutions techniques sur les objectifs stratégiques de l’entreprise.",
+                "description": "Développeur Full-Stack chez XPENS.AI, j’ai contribué au développement de la plateforme avec React, Python (FastAPI), MongoDB et Google Cloud. Réalisations principales : mise en place d’un système de workflows automatisés pour le traitement des factures, développement d’APIs et d’un SDK pour les intégrations externes, et création d’un service de redaction d’images capable de traiter des factures PDF afin d’en recadrer et extraire automatiquement des composants comme les en-têtes et les lignes de facture.",
                 "technology": [
-                    "JavaScript",
                     "Python",
                     "Flask",
                     "React",
                     "MongoDB",
-                    "Unittest"
-                ]
+                    "Google Cloud"
+                ],
+                images:["/xpens_banner.png"]
+
             }
         ],
         "projects": [
@@ -136,7 +115,7 @@ export const info_translations = {
                     "android",
                     "tensorflow",
                 ],
-                images:["/project-sign-language-1"]
+                images:["/project-sign-language-1.jpg"]
 
             },
             {
@@ -165,17 +144,6 @@ export const info_translations = {
                 ]
             },
             {
-                "title": "Prédiction du Cancer du Sein",
-                "description": "Développement d'un modèle prédictif pour diagnostiquer le cancer du sein en utilisant les algorithmes k-trees et ball-trees, améliorant ainsi la précision dans l'identification des cellules cancéreuses. J'ai traité et analysé 700 échantillons de cellules de patients pour entraîner le modèle, qui a été implémenté en Java. Ce projet m’a permis d'acquérir une expérience pratique en apprentissage automatique et en analyse de données.",
-                "github_link": "https://github.com/bbenjii/COEN352-Breast-Cancer-Diagnosis-Model",
-                "image": "",
-                "technology": [
-                    "Science des données",
-                    "Apprentissage automatique",
-                    "Java"
-                ]
-            },
-            {
                 "title": "Site Web Portfolio",
                 "description": "Conception et déploiement d'un site web personnel de portfolio présentant mes projets et compétences techniques. Hébergement sur AWS S3 et utilisation de Bootstrap pour un design responsive, assurant une expérience optimale sur tous les types d'appareils. Ce projet m'a permis de me concentrer sur le développement frontend et le déploiement sur le cloud afin de créer un site efficace et esthétique.",
                 "github_link": "https://github.com/bbenjii/portfolio",
@@ -186,17 +154,6 @@ export const info_translations = {
                     "React"
                 ]
             },
-            {
-                "title": "Jeu de Sudoku",
-                "description": "Développement d'un générateur dynamique de puzzles Sudoku utilisant un algorithme de backtracking, garantissant des grilles de 9x9 solvables et stimulantes. Conception d'une interface utilisateur interactive et intuitive avec le framework Pygame en Python. Ce projet m'a permis de renforcer mes compétences en résolution de problèmes et en programmation grâce à l'implémentation d'algorithmes efficaces pour la logique du jeu.",
-                "github_link": "https://github.com/bbenjii/Sudoku-Game",
-                "image": "",
-                "technology": [
-                    "Interface utilisateur",
-                    "Python",
-                    "Pygame"
-                ]
-            }
         ]
     }
 };

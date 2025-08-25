@@ -201,8 +201,17 @@ export default function Home() {
                                         <div key={index}
                                              className={"flex flex-col lg:flex-row lg:p-4 group gap-4 rounded-xl hover:shadow-lg border border-primary-1/0 hover:border-white/5 shadow-primary-2/30 hover:bg-primary-2/30  "}>
                                             <div className={"lg:w-1/3 text-sm text-white/60"}>
-                                            <span>
+                                            <span className={"flex flex-col gap-2"}>
                                                 {experience.date}
+                                                {experience?.images?.map((image, index) =>
+                                                    {
+                                                        return (
+                                                            <div className={""} key={index}>
+                                                                <Image className={"rounded-3xl"} src={image} alt={"image"} width={200} height={1}  />
+                                                            </div>
+                                                        )
+                                                    }
+                                                )}
                                             </span>
                                             </div>
                                             <div className={"flex flex-col gap-4 lg:w-2/3 text-white/60"}>
