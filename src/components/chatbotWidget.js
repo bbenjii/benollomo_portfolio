@@ -5,10 +5,6 @@ import {useEffect, useRef, useState} from "react";
 import {info_translations, headers_translations, chatbot_system_instructions} from "@/utils/profile_info";
 import Markdown from "react-markdown";
 
-const GEMINI_API_KEY = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
-// const GEMINI_API_KEY = "AIzaSyDcq9gfLMQpeODbWDA2jMtJAexzNBf952A"
-
-
 export default function ChatbotWidget() {
     const [isOpened, setIsOpened] = useState(false);
     const [messages, setMessages] = useState([
@@ -17,7 +13,7 @@ export default function ChatbotWidget() {
     const [messageSending, setMessageSending] = useState(false);
     const [typedMessage, setTypedMessage] = useState("");
     const lastMessageRef = useRef(null);
-
+    const [chatId, setChatId] = useState(null);
     useEffect(() => {
         // handleSendMessage(null, "", true)
     }, [])
@@ -112,24 +108,28 @@ export default function ChatbotWidget() {
 
 
     async function sendMessage(message_history = []) {
-
-        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`;
-        const method = "POST";
-        const headers = {'Content-Type': 'application/json'};
         const contents = [message_history.map((m) => {
             return {role: m.role, parts: [{text: m.text}]}
         })];
-       const generation_config = {temperature: 1, maxOutputTokens: 100, topP: 0.85, topK: 40,};
-        const system_instructions = {parts:[{text: chatbot_system_instructions}]};
-        const body = JSON.stringify({
-            system_instruction: system_instructions,
-            generationConfig: generation_config,
-            contents: contents});
-        const res = await fetch(url, {method, headers, body});
-        const data = await res.json();
 
-        //
-        return data.candidates[0].content.parts[0].text
+        const formData = new FormData()
+        formData.append("messages", JSON.stringify(contents))
+        formData.append("chatId", chatId)
+        const baseURL = "";
+        const params = new URLSearchParams({});
+        const url = baseURL + "/api/chatbot?" + params
+        const body = formData
+
+        const response = await fetch(url,{
+            method: "POST",
+            // headers: {"Content-Type": "multipart/form-data"},
+            body: body,
+        } )
+
+        const data = await response.json()
+        setChatId(data.chatId)
+        console.log(data.message)
+        return data.message
     }
 
     return (

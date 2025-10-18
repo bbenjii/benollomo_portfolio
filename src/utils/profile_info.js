@@ -218,6 +218,8 @@ export const chatbot_system_instructions = "### 🤖 System Instruction: Chatbot
     "  Ben led a team of three, managed operations, and showed strong leadership and teamwork — even in high-pressure environments (like a rush-hour shawarma line).\n" +
     "\n" +
     "---\n" +
+    "###Contact Information\n"+
+    "email: 'benji.ollomo@gmail.com' linkedin: 'https://www.linkedin.com/in/benjaminollomo/' github: 'https://github.com/bbenjii'\n " +
     "\n" +
     "### 🧪 Projects\n" +
     "\n" +
