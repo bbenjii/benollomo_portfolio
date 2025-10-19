@@ -16,20 +16,12 @@ function extractText(resp) {
 
 export async function POST(request) {
     const formData = await request.formData();
-    console.log("gemini key, ", GEMINI_API_KEY)
-
-    console.log(formData)
 
     try{
         const method = "POST";
         const headers = {'Content-Type': 'application/json'};
         const contents = formData.get("messages");
         let chatId = formData.get("chatId");
-        console.log("content:", contents)
-        console.log("size:", JSON.parse(contents)[0].length)
-        console.log("chatId:", chatId)
-        // console.log("type is", typeof contents)
-        //
         const generation_config = {temperature: 1, maxOutputTokens: 100, topP: 0.85, topK: 40,};
         const system_instructions = {parts:[{text: chatbot_system_instructions}]};
         const body = JSON.stringify({
@@ -52,10 +44,8 @@ export async function POST(request) {
         const res = await fetch(url, {method, headers, body});
         const data = await res.json();
 
-        console.log(data)
         const text = data.candidates[0].content.parts[0].text
         
-        // console.log(response)
         
         if(text){
             let messages = JSON.parse(contents)[0]
@@ -64,20 +54,14 @@ export async function POST(request) {
                 if(messages.length === 2){
                     const inserted_id = await createChat({ title: "Portfolio Chat" });
                     chatId = inserted_id.chatId
-                    console.log("new chat created")
 
                 }
                 if(chatId !== null){
-                    console.log("chatId:", chatId)
                     await replaceMessages(chatId, messages);
                 }
             }
         }
 
-        // console.log("result:", response.text())
-
-        // const text = typeof response.text === "function" ? await response.text : extractText(response);
-        // let text = response.candidates[0].content.parts[0].text
         let result = {"message": text, "chatId": chatId};
         return new Response(JSON.stringify(result), {
             status: 201,

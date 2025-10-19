@@ -6,7 +6,7 @@ async function mongoClient(){
 
     let client;
     let mongoClient;
-    if (!process.env.MONGODB_URI) {
+    if (!process.env.NEXT_PUBLIC_MONGODB_URI) {
         throw new Error('Please define the MONGODB_URI environment variable inside .env.local');
     }
 
