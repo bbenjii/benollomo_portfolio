@@ -1,7 +1,7 @@
 import {MongoClient, ObjectId} from 'mongodb';
 
 async function mongoClient(){
-    const uri = process.env.MONGODB_URI; // keep it in your .env file
+    const uri = process.env.NEXT_PUBLIC_MONGODB_URI; // keep it in your .env file
     const options = {};
 
     let client;
