@@ -15,7 +15,7 @@ function extractText(resp) {
 }
 
 export async function POST(request) {
-
+    console.log("gemini key, ", GEMINI_API_KEY)
     const formData = await request.formData();
     console.log(formData)
 
