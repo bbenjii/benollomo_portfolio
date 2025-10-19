@@ -2,8 +2,8 @@ import {chatbot_system_instructions} from "@/utils/profile_info";
 import { GoogleGenAI } from "@google/genai";
 import {appendMessages, createChat, replaceMessages} from "@/utils/mongodb_client";
 
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
-const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`;
+// const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
+// const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`;
 const ai = new GoogleGenAI({apiKey: GEMINI_API_KEY});
 
 function extractText(resp) {
