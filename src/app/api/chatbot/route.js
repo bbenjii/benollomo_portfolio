@@ -15,8 +15,11 @@ function extractText(resp) {
 }
 
 export async function POST(request) {
-    console.log("gemini key, ", GEMINI_API_KEY)
     const formData = await request.formData();
+    const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`;
+    console.log("gemini key, ", GEMINI_API_KEY)
+
     console.log(formData)
 
     try{
