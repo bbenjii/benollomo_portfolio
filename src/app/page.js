@@ -104,7 +104,7 @@ export default function Home() {
                     </div>
                     <div className="flex flex-col w-screen p-4 lg:min-w-200 lg:max-w-200 h-full mx-auto">
                         {/* Navigation Section */}
-                        <div className="flex flex-col lg:py-10 lg:border-b border-white/60">
+                        <div className="flex flex-col lg:py-10 border-white/60">
                             <div className="flex flex-col lg:w-full">
                                 <span className="py-3 text-3xl font-bold ">{info.fullName}</span>
                                 <span className="py-3 text-white/60">{info.headline}</span>
@@ -147,7 +147,7 @@ export default function Home() {
 
                         <div
                             ref={containerRef}
-                            className="flex flex-col gap-15 flex-nowrap lg:overflow-hidden lg:overflow-y-auto no-scrollbar no-scroll"
+                            className="flex flex-col gap-15 flex-nowrap no-scrollbar no-scroll"
                             id="mainContainer"
                         >
                             <div className={""}>
