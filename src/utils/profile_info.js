@@ -1,182 +1,173 @@
-
 export const info_translations = {
     english: {
         fullName: "Benjamin Ollomo",
         firstName: "Ben",
         lastName: "Ollomo",
-        title: "Computer Engineer Student",
-        headline: "I'm an aspiring Software Engineer, passionated about building software and models.",
+        title: "Computer Engineering Student",
+        headline: "Developer.\nTech enthusiast.\nInto fitness, martial arts, and photography.",
         bio: `I’m Benjamin, a software engineer and technology enthusiast with a passion for building innovative solutions. My experience spans across software development, AI-driven chatbots, and full-stack web applications. Currently, I’m refining my skills in Next.js while working on various projects, including a chatbot SaaS platform that integrates AI to enhance business workflows.\n\nBeyond software, I have a deep interest in martial arts, photography, and emerging technologies. My photography business covers live events such as concerts and release parties, blending my technical and artistic passions. I also train in Jiu-Jitsu and Muay Thai, balancing physical discipline with my tech-driven pursuits.\n\n I’m always eager to learn, explore new challenges, and collaborate on impactful projects. Whether it’s optimizing AI models, designing efficient systems, or capturing moments through a lens, I strive to bring creativity and precision to everything I do. Let’s connect and build something great!`,
         experiences: [
             {
-                title: "Software Developer Intern",
+                title: "Software Developer",
                 company: "XPENS.AI",
-                date: "September 2024 - September 2025",
+                date: "Sep 2024 - Present",
                 location: "Montréal, QC",
-                description: "Worked as a Full-Stack Developer at XPENS.AI, delivering features with React, Python (FastAPI), MongoDB, and Google Cloud. Key contributions include building a workflow automation system for invoice processing, developing APIs and an SDK for external integrations, and creating a Redacted Image Service, an API capable of processing invoice PDFs to crop and extract components such as headers and line items.",
-                "technology": [
-                    "Python",
-                    "Flask",
-                    "React",
-                    "MongoDB",
-                    "Google Cloud"
-                ],
-                images:["/xpens_banner.png"]
+                description:
+                    "I work across the frontend, backend, and cloud to build systems that automate and simplify invoice management. From designing user interfaces and APIs to deploying scalable cloud services, I focus on improving how companies extract, process, redact, and organize invoice data.",
+                technology: ["Python", "React", "MongoDB", "Google Cloud"],
+                image: "/xpens_banner.png"
             }
         ],
         projects: [
             {
-                "title": "Sign Language Translator Glove",
-                "description": "Developed a wearable technology and mobile application system that translates sign language gestures into real-time text and speech. Built the smart glove using flex sensors and an ESP32 microcontroller, enabling wireless data transmission via Bluetooth to an Android app. Implemented a machine learning model (TensorFlow Lite) to classify gestures with over 85% accuracy, enhancing accessibility for Deaf and hard-of-hearing individuals. Worked collaboratively in a team of five, covering hardware integration, app development, and ethical design considerations.",
-                "github_link": "https://github.com/bbenjii/Sign-Language-Translator-Glove",
-                "image": "",
-                "technology": [
-                    "java",
-                    "python",
-                    "c++",
-                    "android",
-                    "tensorflow",
-                ],
-                images:["/project-sign-language-1.jpg"]
+                title: "Sign Language Translator Glove",
+                description:
+                    "Designed a smart glove that turns sign language into real-time text and speech through embedded sensors and machine learning.",
+                github_link: "https://github.com/bbenjii/Sign-Language-Translator-Glove",
+                image: "/project-sign-language-1.jpg",
+                technology: ["ESP32", "TensorFlow Lite", "C++", "Android Studio", "Bluetooth"],
+                images: ["/project-sign-language-1.jpg"]
             },
             {
                 title: "Sustainable City Carpooling Platform",
-                description: "Developed a carpooling web app for PolyHacks 2024, focusing on sustainable urban mobility. Led the database design using MongoDB Atlas, managing user authentication with Auth0 for a seamless login experience. Implemented JavaScript-based matching algorithms to optimize user connections and enhance ride-sharing efficiency. Worked in a team of three, demonstrating strong collaboration and problem-solving skills throughout the project.",
+                description:
+                    "Built a carpooling web app for PolyHacks 2024 to promote sustainable urban mobility. Led database design with MongoDB Atlas and integrated Auth0 for secure authentication. Developed matching algorithms to optimize ride-sharing connections.",
                 github_link: "https://github.com/bbenjii/Polyhacks2024",
-                "image": "",
-                "technology": [
-                    "MongoDB",
-                    "Express.js",
-                    "Node",
-                    "Auth0",
-                ]
+                image: null,
+                technology: ["MongoDB", "Express.js", "Node.js", "Auth0"]
             },
             {
                 title: "Real Estate Website",
-                description: "Developed an interactive real estate web platform to support essential property listing and management functionalities. Implemented server-side logic for features like search and filtering, ensuring a seamless user experience. Designed and managed a MySQL database to store listings, user data, offers, and requests. Worked in a team of five, utilizing Agile methodologies for structured development and efficient collaboration.",
+                description:
+                    "Built a real estate web platform with property listing and management features. Implemented search and filtering logic and designed a MySQL database for listings, users, and offers.",
                 github_link: "https://github.com/bbenjii/realestate-platform",
                 image: "",
-                technology: [
-                    "Node",
-                    "MySQL",
-                    "AWS",
-                    "Express.js",
-                    "Jest"
-                ]
+                technology: ["Node.js", "MySQL", "AWS", "Express.js", "Jest"]
             },
             {
                 title: "Portfolio Website",
-                description: "Designed and deployed a personal portfolio website showcasing projects and technical skills. Leveraged AWS S3 for hosting and used Bootstrap for a responsive design, ensuring optimal viewing across different devices. Focused on frontend development and cloud deployment to create an efficient and visually appealing site.",
+                description:
+                    "Built and deployed a responsive portfolio website using Next.js, Tailwind CSS, and AWS Amplify to showcase projects and technical skills.",
                 github_link: "https://github.com/bbenjii/portfolio",
                 image: "",
-                technology: [
-                    "next.js",
-                    "GCP",
-                    "react"
-                ]
-            },
-        ]
-    },
-    french:{
-        "fullName": "Benjamin Ollomo",
-        "firstName": "Ben",
-        "lastName": "Ollomo",
-        "title": "Étudiant Génie Informatique",
-        "headline": "Je suis un futur ingénieur logiciel, passionné par la création de logiciels et de modèles.",
-        "bio": "Je suis Benjamin, un ingénieur logiciel et un passionné de technologie, animé par le désir de créer des solutions innovantes. Mon expérience couvre le développement logiciel, les chatbots basés sur l'IA et les applications web full-stack. Actuellement, je perfectionne mes compétences en Next.js en travaillant sur divers projets, y compris une plateforme SaaS de chatbot intégrant l'IA pour améliorer les flux de travail en entreprise.\n\nAu-delà du développement logiciel, j’ai un vif intérêt pour les arts martiaux, la photographie et les nouvelles technologies. Mon entreprise de photographie couvre des événements en direct tels que des concerts et des soirées de lancement, alliant mes passions techniques et artistiques. Je pratique également le Jiu-Jitsu et le Muay Thai, équilibrant ainsi la discipline physique avec mes projets technologiques.\n\nToujours avide d’apprendre, d’explorer de nouveaux défis et de collaborer sur des projets à fort impact, je m'efforce d'apporter créativité et précision à tout ce que je fais. Que ce soit pour optimiser des modèles d’IA, concevoir des systèmes efficaces ou capturer des instants à travers un objectif, je suis prêt à relever de nouveaux défis. Connectons-nous et bâtissons ensemble quelque chose d’exceptionnel !",
-        "experiences": [
-            {
-                "title": "Stagiaire Développeur Logiciel",
-                "company": "XPENS.AI",
-                "date": "Septembre 2024 - Septembre 2025",
-                "location": "Montréal, QC",
-                "description": "Développeur Full-Stack chez XPENS.AI, j’ai contribué au développement de la plateforme avec React, Python (FastAPI), MongoDB et Google Cloud. Réalisations principales : mise en place d’un système de workflows automatisés pour le traitement des factures, développement d’APIs et d’un SDK pour les intégrations externes, et création d’un service de redaction d’images capable de traiter des factures PDF afin d’en recadrer et extraire automatiquement des composants comme les en-têtes et les lignes de facture.",
-                "technology": [
-                    "Python",
-                    "Flask",
-                    "React",
-                    "MongoDB",
-                    "Google Cloud"
-                ],
-                images:["/xpens_banner.png"]
-
+                technology: ["Next.js", "Tailwind CSS", "AWS Amplify"]
             }
         ],
-        "projects": [
-            {
-                "title": "Gant Traducteur de Langue des Signes",
-                "description": "Développement d'un système combinant technologie portable et application mobile pour traduire les gestes de la langue des signes en texte et parole en temps réel. Conception d'un gant intelligent équipé de capteurs de flexion et d'un microcontrôleur ESP32, transmettant les données sans fil via Bluetooth vers une application Android. Implémentation d'un modèle d'apprentissage automatique (TensorFlow Lite) permettant de classifier les gestes avec une précision de plus de 85%, afin de renforcer l'accessibilité pour les personnes sourdes ou malentendantes. Projet réalisé en équipe de cinq, couvrant l'intégration matérielle, le développement logiciel et les considérations éthiques.",
-                "github_link": "https://github.com/bbenjii/Sign-Language-Translator-Glove",
-                "image": "",
-                "technology": [
-                    "java",
-                    "python",
-                    "c++",
-                    "android",
-                    "tensorflow",
-                ],
-                images:["/project-sign-language-1.jpg"]
+        tech_stack: {
+            languages: ["Python", "JS/TS", "SQL", "Java", "C/C++"],
+            frontend: ["React", "Next.js", "Tailwind"],
+            backend: ["FastAPI/Flask", "Express.js", "REST APIs", "WebSockets"],
+            cloudAndDevOps: ["Google Cloud", "AWS", "Vercel", "Docker"],
+            aiAndAutomation: [
+                "Google Vertex AI (Gemini)",
+                "Google Document AI",
+                "TensorFlow Lite"
+            ],
+            databases: ["MongoDB", "MySQL, PostgreSQL", "Firestore"],
+            tools: ["GitHub", "Postman", "Pytest", "VS Code"]
+        }
+    },
 
+    french: {
+        fullName: "Benjamin Ollomo",
+        firstName: "Ben",
+        lastName: "Ollomo",
+        title: "Étudiant en génie informatique",
+        headline: "Développeur.\nPassionné de technologie.\nSport, arts martiaux et photographie.",
+        bio: `Je suis Benjamin, ingénieur logiciel et passionné de technologie, animé par l’envie de créer des solutions innovantes. Mon expérience couvre le développement logiciel, les chatbots alimentés par l’IA et les applications web full-stack. En ce moment, je perfectionne mes compétences en Next.js tout en travaillant sur divers projets, dont une plateforme SaaS de chatbot qui intègre l’IA pour améliorer les workflows en entreprise.\n\nAu-delà du logiciel, je m’intéresse fortement aux arts martiaux, à la photographie et aux technologies émergentes. Mon entreprise de photographie couvre des événements en direct (concerts, soirées de lancement), alliant mes passions techniques et artistiques. Je pratique aussi le Jiu-Jitsu et le Muay Thai, conciliant discipline physique et projets technologiques.\n\nToujours curieux et ouvert aux défis, je cherche à collaborer sur des projets à fort impact. Qu’il s’agisse d’optimiser des modèles d’IA, de concevoir des systèmes efficaces ou de capturer des moments à travers l’objectif, j’apporte créativité et précision à tout ce que je fais.`,
+        experiences: [
+            {
+                title: "Développeur logiciel",
+                company: "XPENS.AI",
+                date: "Sept. 2024 – Présent",
+                location: "Montréal, QC",
+                description:
+                    "J’interviens sur le frontend, le backend et le cloud pour concevoir des systèmes qui automatisent et simplifient la gestion des factures. De la création d’interfaces et d’APIs au déploiement de services cloud évolutifs, je vise à améliorer l’extraction, le traitement, la rédaction et l’organisation des données de factures.",
+                technology: ["Python", "React", "MongoDB", "Google Cloud"],
+                image: "/xpens_banner.png"
+            }
+        ],
+        projects: [
+            {
+                title: "Gant traducteur de langue des signes",
+                description:
+                    "Conception d’un gant intelligent et d’une application mobile qui transforment les gestes en texte et parole en temps réel grâce à des capteurs embarqués et au machine learning.",
+                github_link: "https://github.com/bbenjii/Sign-Language-Translator-Glove",
+                image: "/project-sign-language-1.jpg",
+                technology: ["ESP32", "TensorFlow Lite", "C++", "Android Studio", "Bluetooth"],
+                images: ["/project-sign-language-1.jpg"]
             },
             {
-                "title": "Plateforme de Covoiturage Urbain Durable",
-                "description": "Développement d'une application web de covoiturage pour PolyHacks 2024, axée sur la mobilité urbaine durable. J'ai dirigé la conception de la base de données avec MongoDB Atlas et géré l'authentification des utilisateurs via Auth0 pour une expérience de connexion fluide. J'ai également implémenté des algorithmes de mise en relation en JavaScript afin d’optimiser les connexions entre utilisateurs. Projet réalisé en équipe de trois, mettant en avant la collaboration et la résolution de problèmes.",
-                "github_link": "https://github.com/bbenjii/Polyhacks2024",
-                "image": "",
-                "technology": [
-                    "MongoDB",
-                    "Express.js",
-                    "Node",
-                    "Auth0"
-                ]
+                title: "Plateforme de covoiturage durable",
+                description:
+                    "Application web réalisée pour PolyHacks 2024 afin de favoriser une mobilité urbaine durable. Conception de la base de données avec MongoDB Atlas, intégration d’Auth0 et algorithmes de mise en relation pour optimiser les trajets partagés.",
+                github_link: "https://github.com/bbenjii/Polyhacks2024",
+                image: null,
+                technology: ["MongoDB", "Express.js", "Node.js", "Auth0"]
             },
             {
-                "title": "Site Web Immobilier",
-                "description": "Développement d'une plateforme web interactive dédiée aux activités et fonctionnalités essentielles de l'immobilier. J'ai conçu et mis en place la logique côté serveur pour des fonctionnalités telles que la recherche et le filtrage, garantissant une expérience utilisateur fluide. J'ai également conçu et géré une base de données MySQL pour stocker les annonces, les données des utilisateurs, les offres et les demandes. Travail en équipe de cinq en appliquant les méthodologies Agile pour un développement structuré et une collaboration efficace.",
-                "github_link": "https://github.com/bbenjii/realestate-platform",
-                "image": "",
-                "technology": [
-                    "Node",
-                    "MySQL",
-                    "AWS",
-                    "Express.js",
-                    "Jest"
-                ]
+                title: "Site immobilier",
+                description:
+                    "Plateforme immobilière avec publication, recherche et gestion d’annonces. Implémentation de la logique de recherche/filtrage et conception d’une base MySQL pour les annonces, utilisateurs et offres.",
+                github_link: "https://github.com/bbenjii/realestate-platform",
+                image: "",
+                technology: ["Node.js", "MySQL", "AWS", "Express.js", "Jest"]
             },
             {
-                "title": "Site Web Portfolio",
-                "description": "Conception et déploiement d'un site web personnel de portfolio présentant mes projets et compétences techniques. Hébergement sur AWS S3 et utilisation de Bootstrap pour un design responsive, assurant une expérience optimale sur tous les types d'appareils. Ce projet m'a permis de me concentrer sur le développement frontend et le déploiement sur le cloud afin de créer un site efficace et esthétique.",
-                "github_link": "https://github.com/bbenjii/portfolio",
-                "image": "",
-                "technology": [
-                    "Next.js",
-                    "GCP",
-                    "React"
-                ]
-            },
-        ]
+                title: "Site portfolio",
+                description:
+                    "Conception et déploiement d’un portfolio responsive avec Next.js, Tailwind CSS et AWS Amplify pour présenter projets et compétences.",
+                github_link: "https://github.com/bbenjii/portfolio",
+                image: "",
+                technology: ["Next.js", "Tailwind CSS", "AWS Amplify"]
+            }
+        ],
+        tech_stack: {
+            languages: ["Python", "JS/TS", "SQL", "Java", "C/C++"],
+            frontend: ["React", "Next.js", "Tailwind"],
+            backend: ["FastAPI/Flask", "Express.js", "APIs REST", "WebSockets"],
+            cloudAndDevOps: ["Google Cloud", "AWS", "Vercel", "Docker"],
+            aiAndAutomation: [
+                "Google Vertex AI (Gemini)",
+                "Google Document AI",
+                "TensorFlow Lite"
+            ],
+            databases: ["MongoDB", "MySQL, PostgreSQL", "Firestore"],
+            tools: ["GitHub", "Postman", "Pytest", "VS Code"]
+        }
     }
 };
 
 export const headers_translations = {
     english: {
-        "about": "About",
-        "projects": "Projects",
-        "experience": "Experience",
-        "interests": "Interests",
-        "view_resume": "View resume",
-        "chat_with_ben": "Ben-Bot"
+        about: "About",
+        projects: "Projects",
+        experience: "Experience",
+        interests: "Interests",
+        view_resume: "View resume",
+        chat_with_ben: "Ben-Bot",
+        tech_stack: "Tech Stack",
+        languages: "Languages",
+        frontend: "Frontend",
+        backend: "Backend",
+        databases: "Databases",
+        cloudAndDevOps: "Cloud & DevOps"
     },
     french: {
-        "about": "À propos",
-        "projects": "Projets",
-        "experience": "Expérience",
-        "interests": "Centres d'intérêt",
-        "view_resume": "Voir le CV",
-        "chat_with_ben": "Ben-Bot"
-
+        about: "À propos",
+        projects: "Projets",
+        experience: "Expérience",
+        interests: "Centres d'intérêt",
+        view_resume: "Voir le CV",
+        chat_with_ben: "Ben-Bot",
+        tech_stack: "Stack technique",
+        languages: "Langages",
+        frontend: "Frontend",
+        backend: "Backend",
+        databases: "Bases de données",
+        cloudAndDevOps: "Cloud & DevOps"
     }
-}
+};
 
 export const chatbot_system_instructions = "### 🤖 System Instruction: Chatbot for Ben's Portfolio Website\n" +
     "\n" +
