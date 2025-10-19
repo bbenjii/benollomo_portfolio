@@ -51,7 +51,7 @@ export async function POST(request) {
         const res = await fetch(url, {method, headers, body});
         const data = await res.json();
 
-        
+        console.log(data)
         const text = data.candidates[0].content.parts[0].text
         
         // console.log(response)
