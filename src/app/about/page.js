@@ -1,6 +1,6 @@
 'use client';
 
-import {ArrowUpRight} from "lucide-react";
+import {ArrowUpRight, BadgeAlert, User} from "lucide-react";
 import Link from "next/link";
 import {useState} from "react";
 import {info_translations, tech_stack} from "@/utils/profile_info";
@@ -35,7 +35,26 @@ export default function AboutPage() {
                         {"building scalable, intelligent financial software with a strong focus on reliability, performance, and clean user experiences."}
                     </span>
                 </p>
+                {/* Key area of work */}
+                <div className={'border rounded-lg p-5 mb-5 bg-secondary-1'}>
+                    <BadgeAlert size={20} className={'mb-2'}/>
+                    <p>
+                        {"My key area of work includes building apps with React the frontend, and Flask/FastAPI, and MongoDB in the backend. I use Docker to keep environments clean and portable, and I've been diving into ..."}
+                    </p>
+
+                </div>
+
+                {/* Beyond work */}
+                <div className={'border rounded-lg p-5 bg-secondary-1'}>
+                    <User size={20} className={'mb-2'}/>
+                    <p>
+                        {"Beyond work and programming, I enjoy fitness training through martial arts, calisthenics, and weight lifting, along with photography and anime."}
+                    </p>
+
+                </div>
             </div>
+            
+            
 
             <div className={'flex flex-col gap-5'}>
                 <span className={'text-sm text-gray-400'}>
