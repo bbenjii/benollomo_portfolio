@@ -1,21 +1,20 @@
 @import "tailwindcss";
 
 :root {
-    /* Base */
-    --background: #121212;   /* primary base */
-    --foreground: #e5e7eb;   /* soft white */
+    --background: #0b0f1a;
+    --foreground: #e5e7eb;
 }
 
 @theme {
-    /* Primary – neutral charcoal */
-    --color-primary-1: #121212; /* main background */
-    --color-primary-2: #161616; /* surface */
-    --color-primary-3: #1c1c1c; /* elevated surface */
-    --color-primary-4: #262626; /* borders / dividers */
+    /* Primary – charcoal blue */
+    --color-primary-1: #0b0f1a;
+    --color-primary-2: #121a2f;
+    --color-primary-3: #1b2a4a;
+    --color-primary-4: #3b5ccc;
 
-    /* Secondary – warm dark neutral */
-    --color-secondary-1: #1a1a19; /* secondary base */
-    --color-secondary-2: #232321; /* hover / subtle contrast */
+    /* Secondary – refined amber */
+    --color-secondary-1: #131721;
+    --color-secondary-2: #131721;
 
   --color-dark-0: #0A0A0A;
   --color-dark-800: #121212;
