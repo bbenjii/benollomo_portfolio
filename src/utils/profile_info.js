@@ -18,6 +18,12 @@ export const info_translations = {
                 image: "/xpens_banner.png"
             }
         ],
+        education:[{
+            program: "Computer Engineering",
+            institution: "Concordia University",
+            date: "2021 - 2026 (expected)",
+            location: "Montréal, QC, Canada"
+        }],
         projects: [
             {
                 title: "Sign Language Translator Glove",
