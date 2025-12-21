@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Roboto } from "next/font/google";
 import Head from 'next/head'
+import Header from "@/components/header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,7 +37,13 @@ export default function RootLayout({ children }) {
       <body style={{maxWidth: "100%", width: "auto"}}
           className={`${geistSans.variable} ${geistMono.variable} antialiased ${roboto.variable}`}
       >
-      {children}
+      <div className="h-screen w-screen overscroll-none flex m-0 ">
+          <div className="lg:min-w-200 lg:max-w-200 h-full mx-auto pt-15 w-full">
+              <Header navigation={[{}]}/>
+              {children}
+          </div>
+
+      </div>
       </body>
       </html>
   );

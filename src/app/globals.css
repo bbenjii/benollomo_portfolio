@@ -66,6 +66,40 @@
 
 }
 
+@keyframes slideInRight {
+    from {
+        transform: translateX(24px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-12px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(12px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 .no-scroll {
   ::-webkit-scrollbar {
     -webkit-appearance: none;
@@ -111,4 +145,10 @@ body {
 html, body {
   width: 100%;
   overflow-x: hidden;
+}
+
+
+.dotted-underline {
+    text-decoration: underline dotted;
+    text-underline-offset: 5px;
 }
