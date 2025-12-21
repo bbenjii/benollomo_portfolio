@@ -1,19 +1,9 @@
 "use client";
-import {useEffect, useRef, useState} from "react";
-import {Switch} from "@headlessui/react";
-import {ExternalLink, ArrowRight, ArrowUpRight} from "lucide-react";
-import {Github, Linkedin, Mail, Phone, Globe} from 'lucide-react';
 
-import Image from "next/image";
+import {ArrowRight, ArrowUpRight} from "lucide-react";
+
 import Link from "next/link";
-import CustomCursor from "../components/customCursor";
-import ChatbotWidget from "../components/chatbotWidget";
-import {headers_translations, info_translations} from "@/utils/profile_info";
-import ExperienceComponent from "@/components/experienceComponent";
 
-import HomeV2 from "@/old_versions/v2/page"
-
-import Header from "@/components/header";
 
 export default function Home() {
 
@@ -21,31 +11,28 @@ export default function Home() {
     return (
 
         <div className={'flex flex-col px-4 py-16 w-full h-full gap-15'}>
-                {/*<HomeV2/>*/}
-
-            {/*<Header navigation={[{}]}/>*/}
 
                 {/* About me section*/}
                 <div className={'flex flex-col lg:gap-5 gap-1'}>
                     <span className={"mb-5"}>
-                        Developer. Tech enthusiast. Into fitness, martial arts, and photography.
+                        {"Developer.Tech enthusiast. Into fitness, martial arts, and photography."}
                     </span>
                     <Link href={'/about'} className={'flex cursor-pointer items-center group gap-1'}>
                         <p className={'dotted-underline '}>
-                            Learn more about me
+                            {"Learn more about me"}
                         </p>
                         <p>
-                            🧑🏾‍💻
+                            {'🧑🏾‍💻'}
                         </p>
                         <ArrowRight size={16} className={"group-hover:translate-x-1/8 transition-transform duration-150"}/>
                     </Link>
 
                     <Link href={'/'} className={'flex cursor-pointer items-center group gap-1'}>
                         <p className={'dotted-underline '}>
-                            What I'm up to now
+                            {"What I'm up to now"}
                         </p>
                         <p>
-                            🔧
+                            {"🔧"}
                         </p>
                         <ArrowRight size={16} className={"group-hover:translate-x-1/8 transition-transform duration-150"}/>
                     </Link>
@@ -56,14 +43,14 @@ export default function Home() {
                 <div className={'flex flex-col gap-5'}>
                     
                     <span className={'text-sm text-gray-400'}>
-                        CONNECT WITH ME
+                        {"CONNECT WITH ME"}
                     </span>
 
-                    <div className={'flex flex-col lg:flex-row gap-5'}>
+                    <div className={'flex flex-col lg:flex-row gap-1 lg:gap-5'}>
                         {/* Email */}
                         <a className={'flex cursor-pointer items-center group gap-1'} href="mailto:benji.ollomo@gmail.com" rel="noopener noreferrer">
                             <p className={'dotted-underline '}>
-                                Email
+                                {"Email"}
                             </p>
                             <ArrowUpRight size={16} className={"mb-1 group-hover:translate-x-1/8 group-hover:-translate-y-1/8 transition-transform duration-150"}/>
                         </a>
@@ -71,7 +58,7 @@ export default function Home() {
                         {/* LinkedIn */}
                         <a className={'flex cursor-pointer items-center group gap-1'} href="https://www.linkedin.com/in/benjaminollomo/" target="_blank" rel="noopener noreferrer">
                             <p className={'dotted-underline '}>
-                                LinkedIn
+                                {"LinkedIn"}
                             </p>
                             <ArrowUpRight size={16} className={"mb-1 group-hover:translate-x-1/8 group-hover:-translate-y-1/8 transition-transform duration-150"}/>
                         </a>
@@ -79,7 +66,7 @@ export default function Home() {
                         {/* Github */}
                         <a className={'flex cursor-pointer items-center group gap-1'} href="https://github.com/bbenjii" target="_blank" rel="noopener noreferrer">
                             <p className={'dotted-underline '}>
-                                Github
+                                {"Github"}
                             </p>
                             <ArrowUpRight size={16} className={"mb-1 group-hover:translate-x-1/8 group-hover:-translate-y-1/8 transition-transform duration-150"}/>
                         </a>
