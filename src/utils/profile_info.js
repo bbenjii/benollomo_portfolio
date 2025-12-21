@@ -1,3 +1,52 @@
+export const tech_stack = [
+    {
+        name: "Python",
+        icon: "/Python.png"
+    },
+    
+    {
+        name: "Flask",
+        icon: "/Flask.png"
+    },
+    {
+        name:"FastAPI",
+        icon: "/FastAPI.png"
+    },
+    {
+        name: "React",
+        icon: "/React.png"
+    },
+    {
+        name: "Git"
+        , icon: "/Git.png"
+    },
+    {
+        name: "MongoDB"
+        , icon: "/MongoDB.png"
+    },
+    
+    {
+        name: "SQL"
+        , icon: "/SQLDeveloper.png"
+    },
+    {
+        name: "Tailwind"
+        , icon: "/Tailwind.png"
+    },
+    {
+        name: "TypeScript"
+        , icon: "/TypeScript.png"
+    },
+    {
+        name: "GCP", 
+        icon: "/GoogleCloud.png"
+    },
+    {
+        name: "AWS", 
+        icon: "/AWS.png"
+    }
+    
+]
 export const info_translations = {
     english: {
         fullName: "Benjamin Ollomo",

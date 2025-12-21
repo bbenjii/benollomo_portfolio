@@ -3,7 +3,8 @@
 import {ArrowUpRight} from "lucide-react";
 import Link from "next/link";
 import {useState} from "react";
-import {info_translations} from "@/utils/profile_info";
+import {info_translations, tech_stack} from "@/utils/profile_info";
+import Image from "next/image";
 
 export default function AboutPage() {
     const [info, setInfo] = useState(info_translations.english);
@@ -110,8 +111,31 @@ export default function AboutPage() {
                         )
                     })
                 }
-                
-                
+            </div>
+
+            <div className={'flex flex-col gap-5'}>
+                <span className={'text-sm text-gray-400'}>
+                        {"Tech Stack"}
+                </span>
+                <div className="grid grid-cols-4 lg:grid-cols-6 gap-6">
+                    {tech_stack.map((tech, index) => (
+                        <div
+                            key={index}
+                            className="flex flex-col items-center gap-2 text-center"
+                        >
+                            <Image
+                                src={tech.icon}
+                                width={32}
+                                height={32}
+                                alt={`${tech.name} logo`}
+                            />
+                            <p className="text-sm text-white/70">
+                                {tech.name}
+                            </p>
+                        </div>
+                    ))}
+                </div>
+
             </div>
 
 
