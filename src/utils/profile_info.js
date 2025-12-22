@@ -47,6 +47,51 @@ export const tech_stack = [
     }
     
 ]
+export const projects =  [
+    {
+        title: "Sign Language Translator Glove",
+        summary: "Real-time sign language translation",
+        date: "2025",
+        description:
+            "Designed a smart glove that turns sign language into real-time text and speech through embedded sensors and machine learning.",
+        github_link: "https://github.com/bbenjii/Sign-Language-Translator-Glove",
+        image: "/project-sign-language-1.jpg",
+        technology: ["ESP32", "TensorFlow Lite", "C++", "Android Studio", "Bluetooth"],
+        images: ["/project-sign-language-1.jpg"]
+    },
+    {
+        title: "Sustainable City Carpooling Platform",
+        summary: "Sustainable ride-sharing platform",
+        date: "2024",
+
+        description:
+            "Built a carpooling web app for PolyHacks 2024 to promote sustainable urban mobility. Led database design with MongoDB Atlas and integrated Auth0 for secure authentication. Developed matching algorithms to optimize ride-sharing connections.",
+        github_link: "https://github.com/bbenjii/Polyhacks2024",
+        image: "/carpool-platform.png",
+        technology: ["MongoDB", "Express.js", "Node.js", "Auth0"]
+    },
+    {
+        title: "Real Estate Website",
+        summary: "Property listing and management",
+        date: "2023",
+        description:
+            "Built a real estate web platform with property listing and management features. Implemented search and filtering logic and designed a MySQL database for listings, users, and offers.",
+        github_link: "https://github.com/bbenjii/realestate-platform",
+        image: "/real-estate-website.png",
+        technology: ["Node.js", "MySQL", "AWS", "Express.js", "Jest"]
+    },
+    {
+        title: "Portfolio Website",
+        summary: "Personal portfolio website",
+        date: "2025",
+        description:
+            "Built and deployed a responsive portfolio website using Next.js, Tailwind CSS, and AWS Amplify to showcase projects and technical skills.",
+        github_link: "https://github.com/bbenjii/portfolio",
+        image: "/benollomo-logo.png",
+        technology: ["Next.js", "Tailwind CSS", "AWS Amplify"]
+    }
+]
+
 export const info_translations = {
     english: {
         fullName: "Benjamin Ollomo",
