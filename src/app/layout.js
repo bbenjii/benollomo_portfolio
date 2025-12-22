@@ -37,11 +37,11 @@ export default function RootLayout({ children }) {
       <body style={{maxWidth: "100%", width: "auto"}}
           className={`${geistSans.variable} ${geistMono.variable} antialiased ${roboto.variable}`}
       >
-      <div className="h-screen w-screen overscroll-none flex m-0 ">
+      {/*<div className="h-screen w-screen flex m-0 ">*/}
           <div className="lg:min-w-200 lg:max-w-200 h-full mx-auto pt-15 w-full">
               <Header navigation={[{}]}/>
               {children}
-          </div>
+          {/*</div>*/}
 
       </div>
       </body>
