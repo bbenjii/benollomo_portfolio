@@ -1,15 +1,13 @@
 'use client';
 
-import {usePathname, useSearchParams} from 'next/navigation';
-import {useRouter} from 'next/navigation';
+import {usePathname} from 'next/navigation';
 import Link from 'next/link';
-import {ExternalLink, ArrowRight, ArrowUpRight, CornerLeftUp, CornerUpLeft} from "lucide-react";
+import {CornerUpLeft} from "lucide-react";
 
 import {useEffect, useState} from "react";
 
 export default function Header({}) {
     const currentPath = usePathname(); // e.g., '/dashboard/settings'
-    const [navigation, setNavigation] = useState([])
     const [subpaths, setSubpaths] = useState([])
     useEffect(() => {
         const pathNames = (currentPath.split('/')).filter(p => p)
@@ -28,7 +26,6 @@ export default function Header({}) {
         setSubpaths(updatedSubpaths)
     }, [currentPath])
 
-    const showBack = currentPath !== '/';
 
     function Separator() {
         return (
@@ -81,13 +78,15 @@ export default function Header({}) {
             {
                     subpaths.map((subpath, index) => {
                         return (
-                            <div key={index} className={`flex gap-2 animate-[slideInUp_300ms_ease-out_forwards]`} style={{ animationDelay: `${index * 100}ms` }} >
+                            <div key={index} className={`flex gap-2 items-center animate-[slideInUp_300ms_ease-out_forwards]`} style={{ animationDelay: `${index * 100}ms` }} >
                                 {index !== 0 && <Separator/>}
                                 <Link
                                     href={subpath.link}
-                                    className={index === subpaths.length - 1 ? 'text-white' : 'text-gray-400'}
+                                    className={`${index === subpaths.length - 1 ? 'text-white' : 'text-gray-400'}`}
                                 >
-                                    {subpath.name}
+                                    <span className={' '}>
+                                        {subpath.name}
+                                    </span>
                                 </Link>
                             </div>
                             

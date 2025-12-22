@@ -2,95 +2,186 @@ export const tech_stack = [
     {
         name: "Python",
         icon: "/Python.png"
-    },
-    
-    {
+    }, {
         name: "Flask",
         icon: "/Flask.png"
-    },
-    {
+    }, {
         name:"FastAPI",
         icon: "/FastAPI.png"
-    },
-    {
+    }, {
         name: "React",
         icon: "/React.png"
-    },
-    {
+    }, {
         name: "Git"
         , icon: "/Git.png"
-    },
-    {
+    }, {
         name: "MongoDB"
         , icon: "/MongoDB.png"
     },
-    
     {
         name: "SQL"
         , icon: "/SQLDeveloper.png"
-    },
-    {
+    }, {
         name: "Tailwind"
         , icon: "/Tailwind.png"
-    },
-    {
+    }, {
         name: "TypeScript"
         , icon: "/TypeScript.png"
-    },
-    {
+    }, {
         name: "GCP", 
         icon: "/GoogleCloud.png"
-    },
-    {
+    }, {
         name: "AWS", 
         icon: "/AWS.png"
     }
     
 ]
-export const projects =  [
+export const projects = [
     {
         title: "Sign Language Translator Glove",
         summary: "Real-time sign language translation",
+        navigation_link: "/projects/sign-language-translator-glove",
+        projectName: "sign-language-translator-glove",
+        category: "Mobile app and Hardware",
         date: "2025",
         description:
             "Designed a smart glove that turns sign language into real-time text and speech through embedded sensors and machine learning.",
         github_link: "https://github.com/bbenjii/Sign-Language-Translator-Glove",
         image: "/project-sign-language-1.jpg",
-        technology: ["ESP32", "TensorFlow Lite", "C++", "Android Studio", "Bluetooth"],
-        images: ["/project-sign-language-1.jpg"]
+        technology: ["ESP32", "TensorFlow", "Android Studio"],
+        images: ["/project-sign-language-1.jpg"],
+        content: `## Sign Language Translator Glove
+
+### Overview
+
+The **Sign Language Translator Glove** is a wearable assistive system that translates sign language gestures into real-time text and speech. It combines embedded hardware, Bluetooth communication, and a machine learning-powered Android application to improve communication between sign language users and non-signers.
+
+---
+
+### Core Features
+
+- Real-time gesture-to-text and speech translation  
+- Wearable glove with flex sensors and ESP32  
+- Android mobile application with multiple interaction modes  
+- TensorFlow Lite-based gesture classification  
+- Customizable gesture mappings and gesture sets  
+- Gesture learning, training, and history logging  
+- Light and Dark mode with multilingual support
+
+---
+
+### Target Users & Impact
+
+Designed for deaf and hard-of-hearing users, educators, and accessibility-focused institutions, the system promotes inclusive communication through wearable, ML-driven assistive technology.
+`
     },
+
     {
         title: "Sustainable City Carpooling Platform",
         summary: "Sustainable ride-sharing platform",
+        navigation_link: "/projects/sustainable-city-carpooling-platform",
+        projectName: "sustainable-city-carpooling-platform",
+        category: "Web app",
         date: "2024",
-
         description:
-            "Built a carpooling web app for PolyHacks 2024 to promote sustainable urban mobility. Led database design with MongoDB Atlas and integrated Auth0 for secure authentication. Developed matching algorithms to optimize ride-sharing connections.",
+            "Built a carpooling web app for PolyHacks 2024 to promote sustainable urban mobility.",
         github_link: "https://github.com/bbenjii/Polyhacks2024",
         image: "/carpool-platform.png",
-        technology: ["MongoDB", "Express.js", "Node.js", "Auth0"]
+        technology: ["MongoDB", "Express.js", "Node.js"],
+        content: `## Sustainable City Carpooling Platform
+
+### Overview
+
+A web-based ride-sharing platform built during PolyHacks 2024 to encourage sustainable urban transportation by connecting users with similar commuting routes.
+
+---
+
+### Key Features
+
+- User authentication with Auth0  
+- Ride matching algorithms for efficient carpooling  
+- MongoDB Atlas-backed data model  
+- RESTful API built with Node.js and Express  
+
+---
+
+### Impact
+
+The platform promotes eco-friendly commuting by reducing single-occupancy vehicle usage and optimizing ride-sharing connections within cities.
+`
     },
+
     {
         title: "Real Estate Website",
         summary: "Property listing and management",
+        navigation_link: "/projects/real-estate-website",
+        projectName: "real-estate-website",
+        category: "Web app",
         date: "2023",
         description:
-            "Built a real estate web platform with property listing and management features. Implemented search and filtering logic and designed a MySQL database for listings, users, and offers.",
+            "Built a real estate web platform with property listing and management features.",
         github_link: "https://github.com/bbenjii/realestate-platform",
         image: "/real-estate-website.png",
-        technology: ["Node.js", "MySQL", "AWS", "Express.js", "Jest"]
+        technology: ["Node.js", "MySQL", "AWS", "Express.js", "Jest"],
+        content: `## Real Estate Website
+
+### Overview
+
+A full-stack real estate platform allowing users to browse, search, and manage property listings through a structured and scalable web application.
+
+---
+
+### Key Features
+
+- Property listing creation and management  
+- Search and filtering by location and price  
+- Relational MySQL database design  
+- REST API built with Express and Node.js  
+
+---
+
+### Technical Focus
+
+This project emphasizes backend architecture, database modeling, and API reliability for real-world web applications.
+`
     },
+
     {
         title: "Portfolio Website",
         summary: "Personal portfolio website",
+        navigation_link: "/projects/portfolio-website",
+        projectName: "portfolio-website",
+        category: "Web app",
         date: "2025",
         description:
-            "Built and deployed a responsive portfolio website using Next.js, Tailwind CSS, and AWS Amplify to showcase projects and technical skills.",
+            "Built and deployed a responsive portfolio website using Next.js and Tailwind CSS.",
         github_link: "https://github.com/bbenjii/portfolio",
         image: "/benollomo-logo.png",
-        technology: ["Next.js", "Tailwind CSS", "AWS Amplify"]
+        technology: ["Next.js", "Tailwind CSS", "AWS Amplify"],
+        content: `## Portfolio Website
+
+### Overview
+
+A personal portfolio website designed to showcase projects, technical skills, and experience with a clean, modern, and responsive interface.
+
+---
+
+### Key Features
+
+- Built with Next.js and App Router  
+- Styled using Tailwind CSS and Typography  
+- Markdown-driven project content  
+- Deployed on AWS Amplify  
+
+---
+
+### Purpose
+
+The site serves as a centralized platform to present selected projects and demonstrate frontend engineering, design consistency, and performance-focused development.
+`
     }
-]
+];
+
 
 export const info_translations = {
     english: {

@@ -104,7 +104,7 @@ export default function Home() {
                     projects.map((project, index) => {
                         return (
                             <div key={index} className={"flex mb-2"}>
-                                <Link href={"/"} className={'flex flex-col lg:flex-row lg:items-center lg:gap-5 cursor-pointer group w-full'}>
+                                <Link href={project.navigation_link} className={'flex flex-col lg:flex-row lg:items-center lg:gap-5 cursor-pointer group w-full'}>
                                     <span className={'dotted-underline'}>
                                         {project.title}
                                     </span>

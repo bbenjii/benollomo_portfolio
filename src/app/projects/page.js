@@ -1,6 +1,7 @@
 "use client";
 import {projects} from "@/utils/profile_info";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ProjectsPage() {
     return (
@@ -15,7 +16,7 @@ export default function ProjectsPage() {
             {
                 projects.map((project, index) => {
                     return (
-                        <div key={index} className={"flex flex-col lg:flex-row gap-1 w-full"}>
+                        <Link href={project.navigation_link} key={index} className={"flex flex-col lg:flex-row gap-1 w-full"}>
                             <div className={"lg:w-2/4"}>
                                 <Image src={project.image} className={"rounded-lg"} alt={project.title} width={500} height={500}/>
                             </div>
@@ -38,7 +39,7 @@ export default function ProjectsPage() {
                                 
                             </div>
                             
-                        </div>
+                        </Link>
                     )
                 })
             }
