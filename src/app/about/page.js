@@ -5,6 +5,7 @@ import Link from "next/link";
 import {useState} from "react";
 import {info_translations, tech_stack} from "@/utils/profile_info";
 import Image from "next/image";
+import TechStackScroller from "@/components/tech-stack-scroller";
 
 export default function AboutPage() {
     const [info, setInfo] = useState(info_translations.english);
@@ -13,7 +14,7 @@ export default function AboutPage() {
         <div className={'flex flex-col px-4 py-16 w-full h-full gap-15'}>
             <div className={'flex flex-col lg:gap-5 gap-1'}>
                 <p className="mb-5">
-                    <span>{"Hey, I’m 👋 Benjamin."}</span>
+                    <span>{"Hey, I’m 👋 Ben."}</span>
 
                     <Link
                         href="https://xpens.ai/"
@@ -21,8 +22,8 @@ export default function AboutPage() {
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1 cursor-pointer group"
                     >
-                        <span className="dotted-underline">
-                            {"Currently a Software Engineer @ XPENS.AI"}
+                        <span className="ml-1 dotted-underline">
+                            {" Currently a Software Developer @ XPENS.AI"}
                         </span>
                         <ArrowUpRight
                             size={16}
@@ -32,14 +33,14 @@ export default function AboutPage() {
 
                     <span>
                         {' '}
-                        {"building scalable, intelligent financial software with a strong focus on reliability, performance, and clean user experiences."}
+                        {"building scalable, intelligent financial software for law firms"}
                     </span>
                 </p>
                 {/* Key area of work */}
                 <div className={'border rounded-lg p-5 mb-5 bg-secondary-1'}>
                     <BadgeAlert size={20} className={'mb-2'}/>
                     <p>
-                        {"My key area of work includes building apps with React the frontend, and Flask/FastAPI, and MongoDB in the backend. I use Docker to keep environments clean and portable, and I've been diving into ..."}
+                        {"My primary focus is building full-stack applications using React for the frontend, FastAPI and MongoDB for the backend, with Google Cloud Platform handling deployment and cloud infrastructure."}
                     </p>
 
                 </div>
@@ -48,14 +49,26 @@ export default function AboutPage() {
                 <div className={'border rounded-lg p-5 bg-secondary-1'}>
                     <User size={20} className={'mb-2'}/>
                     <p>
-                        {"Beyond work and programming, I enjoy fitness training through martial arts, calisthenics, and weight lifting, along with photography and anime."}
+                        {"Beyond work and programming, I enjoy:"}
                     </p>
+                    <ul className={"list-inside list-disc "}>
+                        <li className={''}>
+                            {"Brazilian Jiu-Jitsu"}
+                        </li>
+                        <li>
+                            {"Caliesthenics"}
+                        </li>
+                        <li>
+                            {"Photography"}
+                        </li>
+                        <li>
+                            {"Anime"}
+                        </li>
+                    </ul>
 
                 </div>
             </div>
-            
-            
-
+       
             <div className={'flex flex-col gap-5'}>
                 <span className={'text-sm text-gray-400'}>
                         {"EXPERIENCE"}
@@ -131,33 +144,12 @@ export default function AboutPage() {
                     })
                 }
             </div>
+            <TechStackScroller tech_stack={tech_stack}/>
 
-            <div className={'flex flex-col gap-5'}>
-                <span className={'text-sm text-gray-400'}>
-                        {"Tech Stack"}
-                </span>
-                <div className="grid grid-cols-4 lg:grid-cols-6 gap-6">
-                    {tech_stack.map((tech, index) => (
-                        <div
-                            key={index}
-                            className="flex flex-col items-center gap-2 text-center"
-                        >
-                            <Image
-                                src={tech.icon}
-                                width={32}
-                                height={32}
-                                alt={`${tech.name} logo`}
-                            />
-                            <p className="text-sm text-white/70">
-                                {tech.name}
-                            </p>
-                        </div>
-                    ))}
-                </div>
-
-            </div>
+      
 
 
-            </div>
+
+        </div>
     )
 }

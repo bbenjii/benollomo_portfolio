@@ -148,3 +148,7 @@ html, body {
     text-decoration: underline dotted;
     text-underline-offset: 5px;
 }
+
+.animate-tech-scroll:hover {
+    animation-play-state: paused;
+}
