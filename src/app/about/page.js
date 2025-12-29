@@ -6,9 +6,15 @@ import {useState} from "react";
 import {info_translations, tech_stack} from "@/utils/profile_info";
 import Image from "next/image";
 import TechStackScroller from "@/components/tech-stack-scroller";
+import { useChatbot } from "@/components/chatbotProvider";
 
 export default function AboutPage() {
     const [info, setInfo] = useState(info_translations.english);
+    const { sendChatbotMessage } = useChatbot();
+
+    const handleAskBjj = () => {
+        sendChatbotMessage('what is brazilian jiu jitsu');
+    };
 
     return (
         <div className={'flex flex-col px-4 py-16 w-full h-full gap-15'}>
@@ -49,22 +55,22 @@ export default function AboutPage() {
                 <div className={'border rounded-lg p-5 bg-secondary-1'}>
                     <User size={20} className={'mb-2'}/>
                     <p>
-                        {"Beyond work and programming, I enjoy:"}
+                        {"Beyond work and programming, I enjoy Brazilian jiu-jitsu and calisthenics to stay active, photography, anime and movies."}
                     </p>
-                    <ul className={"list-inside list-disc "}>
-                        <li className={''}>
-                            {"Brazilian Jiu-Jitsu"}
-                        </li>
-                        <li>
-                            {"Caliesthenics"}
-                        </li>
-                        <li>
-                            {"Photography"}
-                        </li>
-                        <li>
-                            {"Anime"}
-                        </li>
-                    </ul>
+                    {/*<ul className={"list-inside list-disc "}>*/}
+                    {/*    <li className={''} >*/}
+                    {/*        {"Brazilian Jiu-Jitsu"}*/}
+                    {/*    </li>*/}
+                    {/*    <li>*/}
+                    {/*        {"Caliesthenics"}*/}
+                    {/*    </li>*/}
+                    {/*    <li>*/}
+                    {/*        {"Photography"}*/}
+                    {/*    </li>*/}
+                    {/*    <li>*/}
+                    {/*        {"Anime"}*/}
+                    {/*    </li>*/}
+                    {/*</ul>*/}
 
                 </div>
             </div>

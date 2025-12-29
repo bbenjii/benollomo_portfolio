@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState, useMemo, useCallback } from 'react';
+import { useEffect, useRef, useState, useCallback, forwardRef, useImperativeHandle } from 'react';
 import { BotMessageSquare, ArrowUp, X, LoaderCircle, Sparkles } from 'lucide-react';
 import Markdown from 'react-markdown';
 
@@ -11,7 +11,7 @@ import Markdown from 'react-markdown';
  * - Auto-resize textarea, Cmd/Ctrl+Enter to send, Esc to close
  * - Better message bubbles + markdown rendering
  */
-export default function ChatbotWidget() {
+const ChatbotWidget = forwardRef(function ChatbotWidget(_, ref) {
     const [isOpened, setIsOpened] = useState(false);
     const [messages, setMessages] = useState([]);
     const [messageSending, setMessageSending] = useState(false);
@@ -40,28 +40,30 @@ export default function ChatbotWidget() {
         autoresize();
     }, [typedMessage, autoresize]);
 
-    const openAndGreet = async () => {
-        if (messages.length === 0) {
-            await handleSendMessage(null, '', true);
-        }
-        setIsOpened(true);
-    };
+    const sendMessage = useCallback(async (message_history = []) => {
+        const contents = [
+            message_history.map((m) => ({ role: m.role, parts: [{ text: m.text }] })),
+        ];
 
-    const handleKeyDown = (e) => {
-        if (e.key === 'Escape') {
-            setTypedMessage('');
-            setIsOpened(false);
-            return;
-        }
-        const metaSend = (e.metaKey || e.ctrlKey) && e.key === 'Enter';
-        const plainEnter = e.key === 'Enter' && !e.shiftKey;
-        if (metaSend || plainEnter) {
-            e.preventDefault();
-            handleSendMessage();
-        }
-    };
+        const formData = new FormData();
+        formData.append('messages', JSON.stringify(contents));
+        formData.append('chatId', chatId);
 
-    async function handleSendMessage(e = null, new_message = typedMessage, first_message = false) {
+        const url = '/api/chatbot';
+
+        const response = await fetch(url, {
+            method: 'POST',
+            body: formData,
+        });
+
+        if (!response.ok) throw new Error('Network response was not ok');
+
+        const data = await response.json();
+        setChatId(data.chatId);
+        return data.message;
+    }, [chatId]);
+
+    const handleSendMessage = useCallback(async (e = null, new_message = typedMessage, first_message = false) => {
         if (messageSending) return;
 
         if (!first_message && new_message.trim() === '') return;
@@ -96,30 +98,40 @@ export default function ChatbotWidget() {
         } finally {
             setMessageSending(false);
         }
-    }
+    }, [messageSending, typedMessage, messages, sendMessage]);
 
-    async function sendMessage(message_history = []) {
-        const contents = [
-            message_history.map((m) => ({ role: m.role, parts: [{ text: m.text }] })),
-        ];
+    const openAndGreet = useCallback(async () => {
+        if (messages.length === 0) {
+            await handleSendMessage(null, '', true);
+        }
+        setIsOpened(true);
+    }, [handleSendMessage, messages]);
 
-        const formData = new FormData();
-        formData.append('messages', JSON.stringify(contents));
-        formData.append('chatId', chatId);
+    const openWithMessage = useCallback(async (text) => {
+        setIsOpened(true);
+        if (text) {
+            await handleSendMessage(null, text);
+        }
+    }, [handleSendMessage]);
 
-        const url = '/api/chatbot';
+    useImperativeHandle(ref, () => ({
+        openWidget: openAndGreet,
+        sendMessage: openWithMessage,
+    }), [openAndGreet, openWithMessage]);
 
-        const response = await fetch(url, {
-            method: 'POST',
-            body: formData,
-        });
-
-        if (!response.ok) throw new Error('Network response was not ok');
-
-        const data = await response.json();
-        setChatId(data.chatId);
-        return data.message;
-    }
+    const handleKeyDown = (e) => {
+        if (e.key === 'Escape') {
+            setTypedMessage('');
+            setIsOpened(false);
+            return;
+        }
+        const metaSend = (e.metaKey || e.ctrlKey) && e.key === 'Enter';
+        const plainEnter = e.key === 'Enter' && !e.shiftKey;
+        if (metaSend || plainEnter) {
+            e.preventDefault();
+            handleSendMessage();
+        }
+    };
 
     return (
         <div className={"group fixed bottom-0 right-0 m-2"}>
@@ -201,7 +213,7 @@ export default function ChatbotWidget() {
                   onKeyDown={handleKeyDown}
                   placeholder="Type a message…"
                   rows={1}
-                  className="min-h-[40px] max-h-[180px] w-full resize-none rounded-xl bg-white/10 px-3 py-2 text-sm text-white placeholder:text-white/40 outline-none ring-1 ring-inset ring-white/15 focus:ring-white/25"
+                  className="min-h-[40px] max-h-[180px] text-base w-full resize-none rounded-xl bg-white/10 px-3 py-2  text-white placeholder:text-white/40 outline-none ring-1 ring-inset ring-white/15 focus:ring-white/25"
               />
                             <button
                                 onClick={() => handleSendMessage()}
@@ -222,7 +234,7 @@ export default function ChatbotWidget() {
             )}
         </div>
     );
-}
+});
 
 function MessageBubble({ role, children }) {
     const isModel = role === 'model';
@@ -239,3 +251,5 @@ function MessageBubble({ role, children }) {
         </div>
     );
 }
+
+export default ChatbotWidget;

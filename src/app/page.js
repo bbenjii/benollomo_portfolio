@@ -4,9 +4,11 @@ import {ArrowRight, ArrowUpRight, ChevronRight} from "lucide-react";
 import {projects} from "@/utils/profile_info";
 import Link from "next/link";
 import {useEffect} from "react";
+import {useChatbot} from "@/components/chatbotProvider";
 
 
 export default function Home() {
+    const {sendChatbotMessage} = useChatbot();
 
     useEffect(() => {
 
@@ -29,9 +31,20 @@ export default function Home() {
 
                 {/* About me section*/}
                 <div className={'flex flex-col lg:gap-5 gap-1'}>
-                    <p className={"mb-5"}>
-                        {"Tech, Fitness, and One Piece enthusiast"}
+                    <p className="mb-5 whitespace-nowrap">
+                        {"Tech, Fitness, and "}
+                        <a
+                            href={"https://en.wikipedia.org/wiki/One_Piece"}
+                            target="_blank" rel="noopener noreferrer"
+                            className="inline-flex cursor-pointer items-center group gap-1 align-baseline"
+                        >
+                            <span className={'dotted-underline '}>
+                            {"One Piece"}
+                        </span>
+                        </a>
+                        {" enthusiast"}
                     </p>
+
                     <Link href={'/about'} className={'flex cursor-pointer items-center group gap-1'}>
                         <p className={'dotted-underline '}>
                             {"Learn more about me"}
