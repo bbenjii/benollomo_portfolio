@@ -46,11 +46,39 @@ export default function ProjectPage({params}) {
                               </div>
                           }
                           {
-                              project.github_link &&
+                              project.repo_links ? 
+                                  <div>
+                                      <p className={"text-sm text-gray-400"}>{"Repos"}</p>
+                                      <div className={"flex flex-col gap-2"}>
+                                      {project.repo_links.map((link, index) => {
+                                          return (
+                                              <div key={index}>
+                                                  <Link href={link} className={'flex cursor-pointer items-center group gap-1'} target="_blank" rel="noopener noreferrer">
+                                                      <p className={"dotted-underline"}>{new URL(link).pathname.slice(1)}</p>
+                                                      <ArrowUpRight size={16} className={"mb-1 group-hover:translate-x-1/8 group-hover:-translate-y-1/8 transition-transform duration-150"}/>
+
+                                                  </Link>
+                                              </div>
+                                          )
+                                      })}
+                                      </div>
+                                  </div> :
+                                  project.github_link &&
+                                  <div>
+                                      <p className={"text-sm text-gray-400"}>{"Repo"}</p>
+                                      <Link href={project.github_link} className={'flex cursor-pointer items-center group gap-1'} target="_blank" rel="noopener noreferrer">
+                                          <p className={"dotted-underline"}>{new URL(project.github_link).pathname.slice(1)}</p>
+                                          <ArrowUpRight size={16} className={"mb-1 group-hover:translate-x-1/8 group-hover:-translate-y-1/8 transition-transform duration-150"}/>
+
+                                      </Link>
+                                  </div>
+                          }
+                          {
+                              project.link &&
                               <div>
-                                  <p className={"text-sm text-gray-400"}>{"Repo"}</p>
-                                  <Link href={project.github_link} className={'flex cursor-pointer items-center group gap-1'} target="_blank" rel="noopener noreferrer">
-                                      <p className={"dotted-underline"}>{new URL(project.github_link).pathname.slice(1)}</p>
+                                  <p className={"text-sm text-gray-400"}>{"Link"}</p>
+                                  <Link href={project.link} className={'flex cursor-pointer items-center group gap-1'} target="_blank" rel="noopener noreferrer">
+                                      <p className={"dotted-underline"}>{project.link}</p>
                                       <ArrowUpRight size={16} className={"mb-1 group-hover:translate-x-1/8 group-hover:-translate-y-1/8 transition-transform duration-150"}/>
 
                                   </Link>

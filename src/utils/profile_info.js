@@ -38,6 +38,70 @@ export const tech_stack = [
 ]
 export const projects = [
     {
+        title: "StocksFeed AI News ",
+        summary: "AI-analyzed market news for traders and algo trading developers",
+        navigation_link: "/projects/stocksfeed-ai-news-pipeline",
+        projectName: "stocksfeed-ai-news-pipeline",
+        category: "Full Stack and Data Pipeline",
+        date: "2025",
+        description:
+            "Built an automated pipeline that scrapes financial news, uses an LLM to extract structured signals like sentiment and impacted tickers, and powers a searchable web app for AI-analyzed market articles.",
+        github_link: "https://github.com/bbenjii/stocksfeed-ai",
+        repo_links: ["https://github.com/bbenjii/stockfeedai-web", "https://github.com/bbenjii/stockfeedai-server"], 
+        image: "/stocksfeed-ai.png",
+        link: "https://stocksfeed.benollomo.com/",
+        technology: [
+            "Python",
+            "FastAPI",
+            "MongoDB",
+            "GCP Cloud Functions",
+            "Cloud Scheduler",
+            "LLM (Gemini/OpenAI)",
+            "React",
+            "TypeScript",
+            "Tailwind CSS",
+        ],
+        images: ["/project-stocksfeed-1.jpg"],
+        content: `## AI-Analyzed Market News Platform
+
+### Overview
+
+This project is an automated pipeline that continuously scrapes stock market–related news articles and analyzes them using large language models. The goal is to transform unstructured financial news into structured, quantitative signals that can be used for market analysis and algorithmic trading.
+
+The system was inspired by the way human investors rely on news to interpret market movements, and explores how software can replicate that process at scale.
+
+---
+
+### Core Features
+
+- Automated scraping of financial news from reliable sources  
+- LLM-based extraction of structured signals from articles  
+- Sentiment scoring to quantify positive and negative market impact  
+- Identification of affected stocks and tickers  
+- Short-term vs long-term impact classification  
+- AI-generated article summaries for human readability  
+- Centralized database storing enriched article data  
+
+---
+
+### System Architecture
+
+The analysis pipeline is deployed as a cloud function triggered every five minutes. On each execution, the system fetches the latest articles, processes them through the analysis layer, and stores the enriched results in a database. This creates a continuously updating dataset of market-aware news signals.
+
+---
+
+### Web Application
+
+On top of the data pipeline, a web application was built to allow users to search, browse, and read AI-analyzed financial news. This made the project both a developer-facing tool and a user-facing product, while providing hands-on experience with full stack development.
+
+---
+
+### Future Plans
+
+Depending on demand, the platform may expose public APIs, allowing developers and traders to integrate news-based signals into their own tools, dashboards, or algorithmic trading systems.
+`,
+    },
+    {
         title: "Sign Language Translator Glove",
         summary: "Real-time sign language translation",
         navigation_link: "/projects/sign-language-translator-glove",
