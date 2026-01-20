@@ -54,7 +54,7 @@ export default function Header({}) {
         );
     };
     return (
-        <div className={'flex px-4 gap-2 items-center w-full'}>
+        <div className={'flex px-4 py-4 gap-2 items-center w-full'}>
             {
                 currentPath !== '/' && 
                 <BackButton/>
@@ -68,7 +68,7 @@ export default function Header({}) {
             {currentPath === '/' && (
                 <div className="flex gap-2 ">
                     <span className="text-gray-400 animate-[slideInLeft_300ms_ease-out_forwards]" >
-                        Software Engineer
+                        Software Developer
                     </span>
                 </div>
             )}
