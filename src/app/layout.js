@@ -36,12 +36,17 @@ export default function RootLayout({ children }) {
           <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       </Head>
       <body style={{maxWidth: "100%", width: "auto"}}
-          className={`${geistSans.variable} ${geistMono.variable} antialiased ${roboto.variable}`}
+          className={`${geistSans.variable} ${geistMono.variable} antialiased ${roboto.variable} h-screen`}
       >
+      
           {/*<ChatbotProvider>*/}
-              <div className="lg:min-w-200 lg:max-w-200 h-full mx-auto pt-15 w-full">
-                  <Header navigation={[{}]}/>
-                  {children}
+              <div className="relative lg:min-w-200 lg:max-w-200  mx-auto pt-15 w-full">
+                  <div className={"sticky top-0 z-50 bg-primary-1"}>
+                      <Header navigation={[{}]}/>
+                  </div>
+                  <div>
+                      {children}
+                  </div>
               </div>
           {/*</ChatbotProvider>*/}
       </body>
