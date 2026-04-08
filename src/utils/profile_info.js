@@ -99,6 +99,85 @@ Depending on demand, the platform may expose public APIs, allowing developers an
 `,
     },
     {
+        title: "Smart Door Lock and Security System",
+        summary: "IoT-based smart lock with camera, remote control, and multi-factor authentication",
+        navigation_link: "/projects/smart-door-lock-security-system",
+        projectName: "smart-door-lock-security-system",
+        category: "IoT, Embedded Systems, and Full Stack",
+        date: "2025",
+        description:
+            "Designed and built an IoT-enabled smart door lock system integrating hardware control, real-time communication, and a full-stack application for secure remote access and monitoring.",
+        // github_link: "https://github.com/bbenjii/SmartLock", // update if needed
+        repo_links: ["https://github.com/bbenjii/smart-doorlock-server", "https://github.com/bbenjii/smart-doorlock-app", "https://github.com/bbenjii/smart-doorlock-hardware"],
+        image: "/smart-doorlock.png",
+        technology: [
+            "ESP32",
+            "Python",
+            "FastAPI",
+            "WebSockets",
+            "React Native",
+            "Firebase",
+            "OpenCV",
+            "C++"
+        ],
+        images: ["/project-doorlock-1.jpg"],
+        content: `## Smart Door Lock and Security System
+
+### Overview
+
+This project is a full-stack IoT system that enables secure and intelligent door access through a combination of embedded hardware, real-time communication, and a mobile application.
+
+The system integrates a smart lock device with a backend server and a mobile app, allowing users to monitor and control access remotely while maintaining local functionality.
+
+---
+
+### Core Features
+
+- Multi-factor authentication (face recognition, Bluetooth, remote access)  
+- Real-time lock/unlock control via mobile application  
+- Live camera streaming and motion-triggered recording  
+- Two-way audio communication between user and visitor  
+- Event logging and system monitoring  
+- Offline-capable local control with optional cloud integration  
+
+---
+
+### System Architecture
+
+The system is composed of three main layers:
+
+- **Device Layer**: Embedded system (ESP32 / Raspberry Pi) handling sensors, camera, and lock actuator  
+- **Backend Layer**: FastAPI server managing device communication, authentication, and event routing via WebSockets  
+- **Application Layer**: React Native mobile app for control, monitoring, and onboarding  
+
+The backend maintains persistent connections with devices and pushes real-time updates to users. 
+
+---
+
+### Technical Highlights
+
+- Designed a modular firmware architecture with drivers, services, and domain layers  
+- Implemented real-time bidirectional communication using WebSockets  
+- Built a scalable backend with REST APIs and event-driven updates  
+- Developed a mobile app with device onboarding (Bluetooth) and live monitoring  
+- Integrated camera streaming with low-latency frame delivery  
+
+---
+
+### Engineering Scope
+
+This project was developed as part of a capstone engineering course, involving full lifecycle development including system design, prototyping, testing, and validation
+
+The system combines embedded systems, networking, and software engineering into a single cohesive product.
+
+---
+
+### Outcome
+
+Delivered a fully functional prototype capable of secure access control, remote monitoring, and real-time interaction, demonstrating a complete IoT ecosystem from hardware to user interface.
+`
+    },
+    {
         title: "Sign Language Translator Glove",
         summary: "Real-time sign language translation",
         navigation_link: "/projects/sign-language-translator-glove",
