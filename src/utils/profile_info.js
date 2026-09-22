@@ -38,6 +38,110 @@ export const tech_stack = [
 ]
 export const projects = [
     {
+        title: "ApolloFi",
+        summary: "AI-assisted personal finance platform built around trustworthy financial data",
+        navigation_link: "/projects/apollofi",
+        projectName: "apollofi",
+        category: "Financial Technology, AI, and Full Stack",
+        date: "2026",
+        description:
+            "Designed and built a personal finance platform that turns connected account and statement data into clear, evidence-backed financial views and conversations.",
+        github_link: "https://github.com/bbenjii/apollofi",
+        image: "/apollofi-cover.svg",
+        technology: [
+            "Next.js",
+            "TypeScript",
+            "FastAPI",
+            "MongoDB",
+            "Gemini",
+            "Plaid",
+            "Google Cloud",
+            "Cloud Run",
+            "Cloud Tasks",
+        ],
+        content: `## AI-assisted personal finance, grounded in real data
+
+### The problem
+
+Financial data arrives from different providers and documents, often with inconsistent account, merchant, category, and transaction structures. ApolloFi is designed to create a dependable financial record first, then use that record to help people understand their position, cash flow, and spending.
+
+### What I built
+
+- A canonical finance model that keeps user-owned accounts and transactions independent of any single data provider
+- Plaid connection and statement-ingestion workflows for bringing financial activity into one product
+- Account balances, transaction history, merchant and category analysis, recurring payments, and period comparisons
+- Currency-aware financial summaries that avoid combining incompatible totals
+- An AI finance chat that answers through bounded, read-only tools and structured evidence instead of unsupported claims
+- Shared analytical contracts so dashboard and conversational experiences use the same underlying calculations
+
+### Product and engineering decisions
+
+The core financial calculations remain deterministic and application-owned. Gemini is used for explanation and coaching over structured results, not as the source of financial truth. This keeps answers traceable and lets the interface link an insight back to the accounts, transactions, merchants, or categories behind it.
+
+Synchronization was designed around user ownership, idempotent writes, cursor safety, and durable background execution. Privacy and operational work includes isolating credentials by environment, keeping secrets server-side, encrypting provider credentials, and treating deployment configuration, deployed revisions, and live traffic as separate verification states.
+
+### Architecture
+
+ApolloFi combines a Next.js dashboard with a FastAPI backend and MongoDB persistence. Plaid and statement ingestion feed the canonical finance layer; Gemini consumes a constrained finance-tool surface; Google Cloud Run and Cloud Tasks support deployment and background work.
+
+### Current direction
+
+The product continues to evolve around a simple discovery path: financial overview, supporting detail, filtered transactions, and an optional evidence-backed explanation. The focus is making complex financial information useful without sacrificing accuracy, ownership boundaries, or user trust.
+`,
+    },
+    {
+        title: "Nasan Energies Website",
+        summary: "Production corporate website and CMS for a Namibian energy company",
+        navigation_link: "/projects/nasan-energies-website",
+        projectName: "nasan-energies-website",
+        category: "Client Work, Web Platform, and CMS",
+        date: "2026",
+        description:
+            "Built a production marketing platform for Nasan Energies with structured content management, a service-station locator, careers publishing, and search-ready public pages.",
+        github_link: "https://github.com/bbenjii/nasan-website",
+        image: "/nasan-cover.svg",
+        link: "https://www.nasanenergies.com/",
+        technology: [
+            "Next.js",
+            "TypeScript",
+            "React",
+            "Sanity",
+            "GROQ",
+            "Google Maps",
+            "Tailwind CSS",
+            "Docker",
+        ],
+        content: `## A maintainable digital platform for Nasan Energies
+
+### The brief
+
+Nasan Energies needed more than a static company page. The website had to communicate the brand clearly, help customers find service stations, support changing newsroom and careers content, and remain straightforward for future developers and content editors to maintain.
+
+### What I built
+
+- A responsive Next.js corporate website aligned with Nasan's visual identity and messaging
+- Sanity-managed homepage, newsroom, service-station, call-to-action, and careers content
+- An interactive Google Maps station locator with search, markers, clustering, and directions
+- Careers listings and vacancy detail pages designed for both direct navigation and QR-code campaigns
+- SEO foundations including canonical metadata, structured data, sitemap, robots rules, and social sharing metadata
+- Responsive navigation and section-level links that work consistently across routes and screen sizes
+
+### Content architecture
+
+The CMS uses focused document types rather than an unstructured page blob. Singleton documents manage shared section copy, while independently queryable records represent articles, stations, and vacancies. Server-rendered pages fetch structured GROQ results and retain deliberate fallbacks where operational content still needs validation.
+
+### Production and maintenance
+
+The application supports standalone Next.js deployment through Docker. Build-time configuration is validated for the public site origin, Sanity, and Google Maps so metadata and integrations do not silently point at development environments.
+
+I also produced architecture-first technical documentation explaining how content, routes, external services, environment variables, deployment, and maintenance fit together. This makes the project easier to operate and extend without requiring knowledge of its original implementation history.
+
+### Outcome
+
+The result is a public-facing platform that balances brand presentation with practical product capabilities: customers can discover the company and its locations, while Nasan can publish timely content through a structured authoring workflow.
+`,
+    },
+    {
         title: "StocksFeed AI News ",
         summary: "AI-analyzed market news for traders and algo trading developers",
         navigation_link: "/projects/stocksfeed-ai-news-pipeline",
@@ -337,6 +441,18 @@ export const info_translations = {
                 company: "XPENS.AI",
                 date: "Sep 2024 - Present",
                 location: "Montréal, QC",
+                link: "https://xpens.ai/",
+                description:
+                    "I work across the frontend, backend, and cloud to build systems that automate and simplify invoice management. From designing user interfaces and APIs to deploying scalable cloud services, I focus on improving how companies extract, process, redact, and organize invoice data.",
+                technology: ["Python", "React", "MongoDB", "Google Cloud"],
+                image: "/xpens_banner.png"
+            },
+            {
+                title: "Website developer",
+                company: "Nasan Energies",
+                date: "2026",
+                location: "Montréal, QC",
+                link: "https://nasanenergies.com/",
                 description:
                     "I work across the frontend, backend, and cloud to build systems that automate and simplify invoice management. From designing user interfaces and APIs to deploying scalable cloud services, I focus on improving how companies extract, process, redact, and organize invoice data.",
                 technology: ["Python", "React", "MongoDB", "Google Cloud"],

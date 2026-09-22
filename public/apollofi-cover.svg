@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title description">
+  <title id="title">ApolloFi project cover</title>
+  <desc id="description">A dark financial dashboard illustration with charts and the ApolloFi name.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="1" stop-color="#162a48"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#5ea8ff"/>
+      <stop offset="1" stop-color="#80e1c1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" rx="36" fill="url(#background)"/>
+  <circle cx="1050" cy="90" r="240" fill="#4d8fff" opacity=".08"/>
+  <circle cx="120" cy="690" r="260" fill="#55d6ae" opacity=".06"/>
+  <g transform="translate(92 86)">
+    <text x="0" y="54" fill="#f4f7fb" font-family="Arial, sans-serif" font-size="46" font-weight="700">ApolloFi</text>
+    <text x="0" y="96" fill="#9cabc1" font-family="Arial, sans-serif" font-size="22">Clarity for your financial life</text>
+    <rect x="0" y="150" width="1016" height="402" rx="24" fill="#0d1627" stroke="#ffffff" stroke-opacity=".12"/>
+    <rect x="28" y="182" width="284" height="150" rx="16" fill="#15243a"/>
+    <text x="52" y="219" fill="#8fa0b8" font-family="Arial, sans-serif" font-size="17">Financial position</text>
+    <text x="52" y="273" fill="#f4f7fb" font-family="Arial, sans-serif" font-size="40" font-weight="700">$24,680</text>
+    <path d="M52 302 C98 286 119 312 160 287 S232 253 282 266" fill="none" stroke="url(#accent)" stroke-width="5" stroke-linecap="round"/>
+    <rect x="336" y="182" width="652" height="242" rx="16" fill="#15243a"/>
+    <text x="364" y="219" fill="#8fa0b8" font-family="Arial, sans-serif" font-size="17">Cash flow</text>
+    <g fill="#31577f">
+      <rect x="376" y="328" width="42" height="60" rx="6"/>
+      <rect x="448" y="286" width="42" height="102" rx="6"/>
+      <rect x="520" y="304" width="42" height="84" rx="6"/>
+      <rect x="592" y="246" width="42" height="142" rx="6"/>
+      <rect x="664" y="266" width="42" height="122" rx="6"/>
+      <rect x="736" y="232" width="42" height="156" rx="6"/>
+      <rect x="808" y="252" width="42" height="136" rx="6"/>
+      <rect x="880" y="218" width="42" height="170" rx="6"/>
+    </g>
+    <path d="M376 338 C448 312 485 322 548 274 S670 294 737 242 S846 264 922 203" fill="none" stroke="#75d7b5" stroke-width="5" stroke-linecap="round"/>
+    <rect x="28" y="356" width="284" height="168" rx="16" fill="#15243a"/>
+    <text x="52" y="394" fill="#8fa0b8" font-family="Arial, sans-serif" font-size="17">Ask Apollo</text>
+    <rect x="52" y="420" width="236" height="72" rx="14" fill="#1c304c"/>
+    <text x="70" y="450" fill="#d9e3ef" font-family="Arial, sans-serif" font-size="15">What changed this month?</text>
+    <text x="70" y="476" fill="#75d7b5" font-family="Arial, sans-serif" font-size="14">Explaining with evidence →</text>
+    <rect x="336" y="448" width="652" height="76" rx="16" fill="#15243a"/>
+    <circle cx="376" cy="486" r="14" fill="#75d7b5"/>
+    <rect x="404" y="475" width="180" height="10" rx="5" fill="#dce7f5" opacity=".75"/>
+    <rect x="404" y="496" width="310" height="8" rx="4" fill="#8fa0b8" opacity=".45"/>
+    <text x="900" y="493" fill="#8fa0b8" font-family="Arial, sans-serif" font-size="15">Evidence</text>
+  </g>
+</svg>

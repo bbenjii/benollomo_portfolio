@@ -29,7 +29,7 @@ export default function AboutPage() {
                         className="inline-flex items-center gap-1 cursor-pointer group"
                     >
                         <span className="ml-1 dotted-underline">
-                            {" Currently a Software Developer @ XPENS.AI"}
+                            {" Currently a Software Developer at XPENS.AI"}
                         </span>
                         <ArrowUpRight
                             size={16}
@@ -139,9 +139,9 @@ export default function AboutPage() {
                                         />
                                     </Link>
                                 </p>
-                                <p className={"text-sm "}>
-                                    {education.date}
-                                </p>
+                                {/*<p className={"text-sm "}>*/}
+                                {/*    {education.date}*/}
+                                {/*</p>*/}
                                 <p className={"text-sm text-gray-400"}>
                                     {education.location}
                                 </p>

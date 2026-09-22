@@ -18,9 +18,9 @@ export default function CustomCursor() {
             style={{
                 background: `radial-gradient(
           circle 700px at ${position.x}px ${position.y}px,
-          #001029 0%,
-          #001029 10%,
-          rgba(0, 8, 20, 0) 100%
+          rgba(125, 211, 252, 0.12) 0%,
+          rgba(125, 211, 252, 0.06) 10%,
+          rgba(0, 0, 0, 0) 100%
         )`,
             }}
         />

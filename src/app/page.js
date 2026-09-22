@@ -1,6 +1,7 @@
 "use client";
 
-import {ArrowRight, ArrowUpRight, BadgeAlert, ChevronRight} from "lucide-react";
+import {ArrowRight, ArrowUpRight, BrainCircuit, ChevronRight, CloudCog, Landmark} from "lucide-react";
+import Image from "next/image";
 import {info_translations, projects, tech_stack} from "@/utils/profile_info";
 import Link from "next/link";
 import {useEffect, useState} from "react";
@@ -29,7 +30,7 @@ export default function Home() {
     }
     return (
 
-        <div className={'flex flex-col px-4 py-16 w-full h-full gap-15'}>
+        <div className={'flex flex-col px-4 py-16 w-full h-full gap-10'}>
 
                 {/* About me section*/}
                 <div className={'flex flex-col lg:gap-5 gap-1'}>
@@ -46,37 +47,62 @@ export default function Home() {
                     {/*    </a>*/}
                     {/*    {" enthusiast"}*/}
                     {/*</p>*/}
-                    <p className="mb-5">
-                        <span>{"Hey 👋🏾, I’m Ben."}</span>
-
-                        <Link
-                            href="https://xpens.ai/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1 cursor-pointer group"
-                        >
-                        <span className="ml-1 dotted-underline">
-                            {" Currently a Software Developer @ XPENS.AI"}
-                        </span>
-                            <ArrowUpRight
-                                size={16}
-                                className="mb-1 transition-transform duration-150 group-hover:translate-x-1/8 group-hover:-translate-y-1/8"
-                            />
-                        </Link>
-
-                        <span>
-                        {' '}
-                            {"building scalable, intelligent financial software for law firms"}
-                    </span>
-                    </p>
-                    {/* Key area of work */}
-                    <div className={'border rounded-lg p-5 mb-5 bg-secondary-1'}>
-                        <BadgeAlert size={20} className={'mb-2'}/>
+                    <div className="space-y-4 text-gray-400">
+                        <p>i&apos;m ben 🧑🏾‍💻</p>
                         <p>
-                            {"My core expertise lies in full-stack development, specializing in React for the frontend, FastAPI and MongoDB for backend systems, and Google Cloud Platform for deployment and infrastructure."}
+                            i’m a software developer at{" "}
+                            <Link href="https://xpens.ai/" target="_blank" rel="noopener noreferrer" className="dotted-underline text-white">
+                                xpens.ai
+                            </Link>
+                            {", where i build financial software for law firms."}
                         </p>
-
+                        <p>
+                            also building{" "}
+                            <Link href="https://nora-fi.com" target="_blank" rel="noopener noreferrer" className="dotted-underline text-white">
+                                nora
+                            </Link>
+                            {", helping people understand their finances."}
+                        </p>
+                        <p>
+                            and{" "}
+                            <Link href="https://getreelly.com" target="_blank" rel="noopener noreferrer" className="dotted-underline text-white">
+                                reelly
+                            </Link>
+                            {", bringing people’s saved social media posts together in one place."}
+                        </p>
                     </div>
+                    {/* What I build */}
+                    {/*<div className={'border rounded-lg p-5 mb-5 bg-secondary-1'}>*/}
+                    {/*    <p className="text-lg leading-relaxed max-w-2xl">*/}
+                    {/*        Full-stack product engineer building AI-assisted financial systems, internal workflows, and production web applications.*/}
+                    {/*    </p>*/}
+                    
+                    {/*    <div className="grid gap-5 mt-6 lg:grid-cols-3">*/}
+                    {/*        <div className="flex flex-col gap-2">*/}
+                    {/*            <Landmark size={20} aria-hidden="true"/>*/}
+                    {/*            <p className="font-medium">Financial software and transaction systems</p>*/}
+                    {/*            <p className="text-sm text-white/60">*/}
+                    {/*                Designing reliable workflows for financial data, reconciliation, invoices, expenses, and reporting.*/}
+                    {/*            </p>*/}
+                    {/*        </div>*/}
+                    
+                    {/*        <div className="flex flex-col gap-2">*/}
+                    {/*            <BrainCircuit size={20} aria-hidden="true"/>*/}
+                    {/*            <p className="font-medium">AI-assisted products and structured automation</p>*/}
+                    {/*            <p className="text-sm text-white/60">*/}
+                    {/*                Turning complex documents and business processes into reviewable, evidence-backed product experiences.*/}
+                    {/*            </p>*/}
+                    {/*        </div>*/}
+                    
+                    {/*        <div className="flex flex-col gap-2">*/}
+                    {/*            <CloudCog size={20} aria-hidden="true"/>*/}
+                    {/*            <p className="font-medium">Production web platforms and cloud infrastructure</p>*/}
+                    {/*            <p className="text-sm text-white/60">*/}
+                    {/*                Shipping full-stack applications from user interface and APIs through deployment, operations, and maintenance.*/}
+                    {/*            </p>*/}
+                    {/*        </div>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
 
                     {/*<Link href={'/about'} className={'flex cursor-pointer items-center group gap-1'}>*/}
                     {/*    <p className={'dotted-underline '}>*/}
@@ -103,70 +129,50 @@ export default function Home() {
                 {/* Connect with Me*/}
                 <div className={'flex flex-col gap-5'}>
                     
-                    <span className={'text-sm text-gray-400'}>
-                        {"CONNECT WITH ME"}
-                    </span>
+                    {/*<span className={'text-sm text-gray-400'}>*/}
+                    {/*    {"CONNECT WITH ME"}*/}
+                    {/*</span>*/}
 
-                    <div className={'flex flex-col lg:flex-row gap-1 lg:gap-5'}>
+                    <div className={'flex flex-row gap-5'}>
                         {/* Email */}
-                        <a className={'flex cursor-pointer items-center group gap-1'} href="mailto:benji.ollomo@gmail.com" rel="noopener noreferrer">
-                            <p className={'dotted-underline '}>
-                                {"Email"}
-                            </p>
-                            <ArrowUpRight size={16} className={"mb-1 group-hover:translate-x-1/8 group-hover:-translate-y-1/8 transition-transform duration-150"}/>
+                        <a className="flex cursor-pointer items-center" href="mailto:benji.ollomo@gmail.com" aria-label="Email">
+                            <Image src="/mail-logo.png" alt="" width={18} height={18} className="opacity-60 transition-opacity hover:opacity-100" />
                         </a>
 
                         {/* LinkedIn */}
-                        <a className={'flex cursor-pointer items-center group gap-1'} href="https://www.linkedin.com/in/benjaminollomo/" target="_blank" rel="noopener noreferrer">
-                            <p className={'dotted-underline '}>
-                                {"LinkedIn"}
-                            </p>
-                            <ArrowUpRight size={16} className={"mb-1 group-hover:translate-x-1/8 group-hover:-translate-y-1/8 transition-transform duration-150"}/>
+                        <a className="flex cursor-pointer items-center" href="https://www.linkedin.com/in/benjaminollomo/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <Image src="/linkedin-logo.png" alt="" width={18} height={18} className="opacity-60 transition-opacity hover:opacity-100" />
                         </a>
 
                         {/* Github */}
-                        <a className={'flex cursor-pointer items-center group gap-1'} href="https://github.com/bbenjii" target="_blank" rel="noopener noreferrer">
-                            <p className={'dotted-underline '}>
-                                {"Github"}
-                            </p>
-                            <ArrowUpRight size={16} className={"mb-1 group-hover:translate-x-1/8 group-hover:-translate-y-1/8 transition-transform duration-150"}/>
+                        <a className="flex cursor-pointer items-center" href="https://github.com/bbenjii" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <Image src="/github-logo.png" alt="" width={18} height={18} className="opacity-60 transition-opacity hover:opacity-100" />
                         </a>
                     </div>
                 </div>
 
-            <div className={'flex flex-col gap-5'}>
-                <span className={'text-sm text-gray-400'}>
+            <div className={'flex flex-col gap-5 lowercase'}>
+                <span className={'text-sm text-gray-400 uppercase'}>
                         {"EXPERIENCE"}
                     </span>
                 {
                     info.experiences.map((experience, index) => {
                         return (
-                            <div key={index} className={"flex flex-col gap-1"}>
-                                <p>
-                                    <Link
-                                        href="https://xpens.ai/"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="inline-flex items-center gap-1 cursor-pointer group"
-                                    >
-                                    <span className="dotted-underline">
-                                        {`${experience.title} at ${experience.company}`}
-                                    </span>
-                                        <ArrowUpRight
-                                            size={16}
-                                            className="mb-1 transition-transform duration-150 group-hover:translate-x-1/8 group-hover:-translate-y-1/8"
-                                        />
+                            <div key={index} className="flex items-center gap-3">
+                                <Image
+                                    src={experience.company === "XPENS.AI" ? "/xpens-logo.svg" : "/nasan-logo.svg"}
+                                    alt={`${experience.company} logo`}
+                                    width={28}
+                                    height={28}
+                                    className="size-7 shrink-0 object-contain"
+                                />
+                                <div className="flex min-w-0 flex-1 flex-wrap items-baseline gap-x-3 gap-y-1 text-base">
+                                    <Link href={experience.link} target="_blank" rel="noopener noreferrer" className="font-medium text-white hover:dotted-underline">
+                                        {experience.company}
                                     </Link>
-                                </p>
-                                <p className={"text-sm "}>
-                                    ({experience.date})
-                                </p>
-                                <ul className="text-sm text-white/60 list-disc list-inside marker:text-white/60 mt-3 space-y-1">
-                                    <li>Full-stack development using React, FastAPI, MongoDB, and Google Cloud</li>
-                                    <li>AI-powered automation for invoice processing</li>
-                                    <li>Scalable backend services and APIs</li>
-                                    <li>UI improvements and reliable cloud deployments</li>
-                                </ul>
+                                    <span className="text-gray-400">- {experience.title}</span>
+                                    {/*<span className="ml-auto text-gray-500">{experience.date}</span>*/}
+                                </div>
                             </div>
                         )
                     })
@@ -239,9 +245,9 @@ export default function Home() {
                                         />
                                     </Link>
                                 </p>
-                                <p className={"text-sm "}>
-                                    {education.date}
-                                </p>
+                                {/*<p className={"text-sm "}>*/}
+                                {/*    {education.date}*/}
+                                {/*</p>*/}
                                 <p className={"text-sm text-gray-400"}>
                                     {education.location}
                                 </p>

@@ -2,20 +2,19 @@
 @plugin '@tailwindcss/typography';
 
 :root {
-    --background: #0b0f1a;
-    --foreground: #e5e7eb;
+    --background: #000000;
+    --foreground: #ffffff;
 }
 
 @theme {
-    /* Primary – charcoal blue */
-    --color-primary-1: #0b0f1a;
-    --color-primary-2: #121a2f;
-    --color-primary-3: #1b2a4a;
-    --color-primary-4: #3b5ccc;
+    /* Dantelex-inspired palette: black, white, slate, and sky blue */
+    --color-primary-1: #000000;
+    --color-primary-2: #0a0a0a;
+    --color-primary-3: #171717;
+    --color-primary-4: #7dd3fc;
 
-    /* Secondary – refined amber */
-    --color-secondary-1: #131721;
-    --color-secondary-2: #131721;
+    --color-secondary-1: #0a0a0a;
+    --color-secondary-2: #171717;
 
   --color-dark-0: #0A0A0A;
   --color-dark-800: #121212;
@@ -29,10 +28,10 @@
   --color-light_4: #CED4DA;
   --color-light_5: #ADB5BD;
 
-  --color-darkBlue-0: #000814;
-  --color-darkBlue-1: #000C1E;
-  --color-darkBlue-2: #001029;
-  --color-darkBlue-3: #002966;
+  --color-darkBlue-0: #000000;
+  --color-darkBlue-1: #0a0a0a;
+  --color-darkBlue-2: #171717;
+  --color-darkBlue-3: #7dd3fc;
 
   /*--color-dark-0: #0A0A0A; !* Deep Black (Primary Background) *!*/
   --color-dark-1: #1E1E1E; /* Charcoal Gray (Secondary Background) */
@@ -40,17 +39,17 @@
   --color-dark-3: #333333; /* Softer Dark Gray */
   --color-dark-4: #3D3D3D; /* Slightly Lighter Gray */
 
-  --color-accent-100: #E63946; /* Crimson Red (Primary Accent) */
-  --color-accent-1: #F4A261; /* Warm Orange (Secondary Accent) */
-  --color-accent-2: #003566; /* Muted Blue (Links, Hover) */
-  --color-accent-3: #2A9D8F; /* Teal Green (Success) */
-  --color-accent-4: #E9C46A; /* Golden Yellow (Warning) */
+  --color-accent-100: #7dd3fc; /* Sky blue accent */
+  --color-accent-1: #bae6fd; /* Soft sky blue */
+  --color-accent-2: #38bdf8; /* Strong sky blue */
+  --color-accent-3: #7dd3fc; /* Informational accent */
+  --color-accent-4: #e0f2fe; /* Pale sky blue */
 
   --color-text_0: #F8F9FA; /* Off-White (Primary Text) */
   --color-text-1: #D6D6D6; /* Soft Light Gray (Secondary Text) */
   --color-text_2: #A0A0A0; /* Muted Gray (Less Emphasis) */
-  --color-border: #6C757D; /* Border and Divider Color */
-  --color-error: #D62828; /* Strong Red (Errors, Dangers) */
+  --color-border: #4b5563; /* Slate border and divider */
+  --color-error: #fca5a5; /* Soft red for errors */
 
 
 }

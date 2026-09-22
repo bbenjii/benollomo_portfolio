@@ -48,8 +48,8 @@ export default function Header({}) {
                 className="relative flex size-2.5"
             >
                 <span
-                    className="absolute inline-flex h-full w-full animate-[ping_3s_ease-in-out_infinite] rounded-full bg-emerald-500 opacity-75"/>
-                <span className="relative inline-flex size-2.5 rounded-full bg-emerald-500"/>
+                    className="absolute inline-flex h-full w-full animate-[ping_3s_ease-in-out_infinite] rounded-full bg-sky-300 opacity-75"/>
+                <span className="relative inline-flex size-2.5 rounded-full bg-sky-300"/>
             </div>
         );
     };
