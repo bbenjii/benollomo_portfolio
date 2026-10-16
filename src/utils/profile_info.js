@@ -1,53 +1,132 @@
 export const tech_stack = [
     {
         name: "Python",
+        tier: "S",
         icon: "/Python.png"
     }, {
         name: "Flask",
-        icon: "/Flask.png"
+        tier: "C",
+        icon: "/tech/flask.svg"
     }, {
         name:"FastAPI",
+        tier: "S",
         icon: "/FastAPI.png"
     }, {
         name: "React",
+        tier: "S",
         icon: "/React.png"
     }, {
+        name: "Next.js",
+        tier: "S",
+        icon: "/tech/nextdotjs.svg"
+    }, {
+        name: "React Native",
+        tier: "B",
+        icon: "/React.png"
+    }, {
+        name: "Expo",
+        tier: "B",
+        icon: "/tech/expo.svg"
+    }, {
+        name: "Docker",
+        tier: "B",
+        icon: "/tech/docker.svg"
+    }, {
+        name: "Sanity",
+        tier: "B",
+        icon: "/tech/sanity.svg"
+    }, {
+        name: "Gemini",
+        tier: "B",
+        icon: "/tech/googlegemini.svg"
+    }, {
+        name: "Codex",
+        tier: "A",
+        icon: "/tech/codex.svg"
+    }, {
+        name: "Claude",
+        tier: "B",
+        icon: "/tech/claude.svg"
+    }, {
+        name: "Figma",
+        tier: "B",
+        icon: "/tech/figma.svg"
+    }, {
+        name: "Google Stitch",
+        tier: "B",
+        icon: "/tech/google-stitch.png"
+    }, {
+        name: "Better Auth",
+        tier: "B",
+        icon: "/tech/better-auth.svg"
+    }, {
         name: "Git"
-        , icon: "/Git.png"
+        ,
+        tier: "A", icon: "/Git.png"
     }, {
         name: "MongoDB"
-        , icon: "/MongoDB.png"
+        ,
+        tier: "A", icon: "/MongoDB.png"
     },
     {
-        name: "SQL"
-        , icon: "/SQLDeveloper.png"
+        name: "MySQL"
+        ,
+        tier: "C", icon: "/tech/mysql.svg"
     }, {
         name: "Tailwind"
-        , icon: "/Tailwind.png"
+        ,
+        tier: "A", icon: "/Tailwind.png"
     }, {
         name: "TypeScript"
-        , icon: "/TypeScript.png"
+        ,
+        tier: "S", icon: "/TypeScript.png"
     }, {
-        name: "GCP", 
+        name: "GCP",
+        tier: "A",
         icon: "/GoogleCloud.png"
     }, {
-        name: "AWS", 
+        name: "AWS",
+        tier: "C",
         icon: "/AWS.png"
     }
     
 ]
 export const projects = [
     {
-        title: "ApolloFi",
-        summary: "AI-assisted personal finance platform built around trustworthy financial data",
-        navigation_link: "/projects/apollofi",
-        projectName: "apollofi",
+        title: "Reelly",
+        summary: "save social posts and find the useful parts later",
+        navigation_link: "/projects/reelly",
+        projectName: "reelly",
+        icon: "/project-icons/reelly.png",
+        category: "AI, Mobile, and Web",
+        date: "2026",
+        description: "Built a mobile and web app to save social posts and make their useful details easier to find again.",
+        image: "/case-studies/reelly/screenshot-2026-10-15-at-2.06.09-pm.png",
+        link: "https://getreelly.com",
+        technology: [
+            "Next.js",
+            "TypeScript",
+            "React Native",
+            "Expo",
+            "FastAPI",
+            "MongoDB",
+            "Better Auth",
+            "OpenAI",
+            "Google Cloud Storage",
+        ],
+    },
+    {
+        title: "Nora",
+        summary: "understand your spending and chat with your finances",
+        navigation_link: "/projects/nora",
+        projectName: "nora",
+        icon: "/project-icons/nora-dashboard.svg",
         category: "Financial Technology, AI, and Full Stack",
         date: "2026",
         description:
             "Designed and built a personal finance platform that turns connected account and statement data into clear, evidence-backed financial views and conversations.",
-        github_link: "https://github.com/bbenjii/apollofi",
-        image: "/apollofi-cover.svg",
+        link: "https://nora-fi.com",
+        image: "/case-studies/apollofi/screenshot-2026-10-15-at-6.31.53-pm.png",
         technology: [
             "Next.js",
             "TypeScript",
@@ -90,16 +169,17 @@ The product continues to evolve around a simple discovery path: financial overvi
 `,
     },
     {
-        title: "Nasan Energies Website",
-        summary: "Production corporate website and CMS for a Namibian energy company",
+        title: "nasan",
+        summary: "an energy company website with content its team can manage",
         navigation_link: "/projects/nasan-energies-website",
         projectName: "nasan-energies-website",
+        icon: "/project-icons/nasan.svg",
         category: "Client Work, Web Platform, and CMS",
         date: "2026",
         description:
             "Built a production marketing platform for Nasan Energies with structured content management, a service-station locator, careers publishing, and search-ready public pages.",
         github_link: "https://github.com/bbenjii/nasan-website",
-        image: "/nasan-cover.svg",
+        image: "/case-studies/nasan-energies-website/nasan-homepage.png",
         link: "https://www.nasanenergies.com/",
         technology: [
             "Next.js",
@@ -142,10 +222,11 @@ The result is a public-facing platform that balances brand presentation with pra
 `,
     },
     {
-        title: "StocksFeed AI News ",
-        summary: "AI-analyzed market news for traders and algo trading developers",
+        title: "stocksfeed",
+        summary: "stock market news, summarized and analyzed with AI",
         navigation_link: "/projects/stocksfeed-ai-news-pipeline",
         projectName: "stocksfeed-ai-news-pipeline",
+        icon: "/project-icons/stocksfeed.svg",
         category: "Full Stack and Data Pipeline",
         date: "2025",
         description:
@@ -207,6 +288,7 @@ Depending on demand, the platform may expose public APIs, allowing developers an
         summary: "IoT-based smart lock with camera, remote control, and multi-factor authentication",
         navigation_link: "/projects/smart-door-lock-security-system",
         projectName: "smart-door-lock-security-system",
+        hidden: true,
         category: "IoT, Embedded Systems, and Full Stack",
         date: "2025",
         description:
@@ -286,6 +368,7 @@ Delivered a fully functional prototype capable of secure access control, remote 
         summary: "Real-time sign language translation",
         navigation_link: "/projects/sign-language-translator-glove",
         projectName: "sign-language-translator-glove",
+        hidden: true,
         category: "Mobile app and Hardware",
         date: "2025",
         description:
@@ -325,6 +408,7 @@ Designed for deaf and hard-of-hearing users, educators, and accessibility-focuse
         summary: "Sustainable ride-sharing platform",
         navigation_link: "/projects/sustainable-city-carpooling-platform",
         projectName: "sustainable-city-carpooling-platform",
+        hidden: true,
         category: "Web app",
         date: "2024",
         description:
@@ -360,6 +444,7 @@ The platform promotes eco-friendly commuting by reducing single-occupancy vehicl
         summary: "Property listing and management",
         navigation_link: "/projects/real-estate-website",
         projectName: "real-estate-website",
+        hidden: true,
         category: "Web app",
         date: "2023",
         description:
@@ -395,6 +480,7 @@ This project emphasizes backend architecture, database modeling, and API reliabi
         summary: "Personal portfolio website",
         navigation_link: "/projects/portfolio-website",
         projectName: "portfolio-website",
+        hidden: true,
         category: "Web app",
         date: "2025",
         description:
@@ -738,3 +824,5 @@ export const chatbot_system_instructions = "### 🤖 System Instruction: Chatbot
     "Use this tone — kind, casual, and helpful — and always keep the responses grounded in the context above.\n" +
     "\n" +
     "You’re here to make visitors feel welcome and informed while letting Ben’s personality and skills shine. 🌟\n"
+
+export const visibleProjects = projects.filter((project) => !project.hidden);

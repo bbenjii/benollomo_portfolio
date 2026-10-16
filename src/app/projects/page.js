@@ -1,5 +1,5 @@
 "use client";
-import {projects} from "@/utils/profile_info";
+import {visibleProjects} from "@/utils/profile_info";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -14,7 +14,7 @@ export default function ProjectsPage() {
                 </p>
             </div>
             {
-                projects.map((project, index) => {
+                visibleProjects.map((project, index) => {
                     return (
                         <Link href={project.navigation_link} key={index} className={"flex flex-col lg:flex-row gap-1 w-full"}>
                             <div className={"lg:w-2/4"}>

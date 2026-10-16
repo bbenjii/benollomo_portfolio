@@ -1,4 +1,7 @@
 import Image from "next/image";
+import {readFile} from "node:fs/promises";
+import path from "node:path";
+import ProjectMarkdown from "@/components/project-markdown";
 import Link from "next/link";
 import {notFound} from "next/navigation";
 import {ArrowRight, ArrowUpRight, CheckCircle2, ShieldCheck} from "lucide-react";
@@ -140,20 +143,24 @@ export default async function ProjectPage({params}) {
 
     if (!project) notFound();
 
+    const markdownProjects = ["nora", "nasan-energies-website", "stocksfeed-ai-news-pipeline",
+        "smart-door-lock-security-system", "sign-language-translator-glove", "reelly"];
+    const markdown = markdownProjects.includes(projectName)
+        ? await readFile(path.join(process.cwd(), "src/content/projects", `${projectName}.md`), "utf8")
+        : null;
     const caseStudy = projectCaseStudies[projectName];
     const repositoryLinks = project.repo_links || (project.github_link ? [project.github_link] : []);
 
     return (
         <main className="flex w-full flex-col gap-12 px-4 py-16">
             <header className="flex max-w-2xl flex-col gap-4">
-                <p className="text-sm text-white/45">{project.category} · {project.date}</p>
                 <h1 className="text-3xl font-medium tracking-tight lg:text-4xl">{project.title}</h1>
                 <p className="text-lg leading-8 text-white/65">{project.description || project.summary}</p>
                 <div className="mt-2 flex flex-wrap gap-x-5 gap-y-2 text-sm">
                     {repositoryLinks.map((link) => (
                         <ExternalLink href={link} key={link}>{new URL(link).pathname.slice(1)}</ExternalLink>
                     ))}
-                    {project.link && <ExternalLink href={project.link}>Visit live project</ExternalLink>}
+                    {project.link && <ExternalLink href={project.link}>Live site</ExternalLink>}
                 </div>
             </header>
 
@@ -166,7 +173,9 @@ export default async function ProjectPage({params}) {
                 ))}
             </div>
 
-            {caseStudy ? (
+            {markdown ? (
+                <ProjectMarkdown content={markdown}/>
+            ) : caseStudy ? (
                 <CaseStudy project={project} caseStudy={caseStudy}/>
             ) : project.content ? (
                 <div className="prose prose-invert max-w-none">

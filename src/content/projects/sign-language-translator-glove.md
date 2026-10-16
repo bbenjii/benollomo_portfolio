@@ -1,0 +1,11 @@
+This was a group project I worked on for my computer engineering degree. We built a sign language translator glove, with the idea of helping people who use sign language communicate with people who don't. Essentially, you make a gesture while wearing the glove, and a mobile app recognizes it and displays the associated text or reads it out loud.
+
+The project had two main parts: the glove and an Android app. The glove had five flex sensors, one for each finger, connected to an ESP32 microcontroller. These sensors measure how much your fingers bend. The ESP32 continuously reads those values and sends them to the phone over Bluetooth, where the app handles the actual gesture recognition.
+
+The interesting part was turning those sensor readings into something meaningful. A bent finger doesn't give you the exact same reading every time, so simply writing a bunch of if/else statements wasn't enough. We explored different classification approaches and used a machine learning model to recognize patterns in the readings. The app also checked that a gesture was stable before classifying it, so moving your hand between gestures wouldn't immediately trigger a new translation.
+
+On the app side, we added more than just the translation screen. Users could change what a recognized gesture meant and create different gesture collections for different situations. There was also a history of previous gestures, a learning mode where you could practice signs and get feedback, and support for English and French. For communication in the other direction, the app could display sign images based on typed or spoken input.
+
+There were some hardware challenges too. Getting the sensors to stay in place while keeping the glove comfortable took a few attempts. We also tried adding a motion sensor to capture more complex movements, but that integration didn't work out, so the prototype focused on a limited set of finger-based gestures.
+
+Overall, the project was an exercise in connecting hardware, Bluetooth communication, machine learning, and a mobile interface. The scope was fairly small, but we got the flow working from physically bending your fingers to seeing and hearing the result on a phone.

@@ -2,11 +2,11 @@
 
 import {ArrowRight, ArrowUpRight, BrainCircuit, ChevronRight, CloudCog, Landmark} from "lucide-react";
 import Image from "next/image";
-import {info_translations, projects, tech_stack} from "@/utils/profile_info";
+import {info_translations, visibleProjects, tech_stack} from "@/utils/profile_info";
 import Link from "next/link";
 import {useEffect, useState} from "react";
 import {useChatbot} from "@/components/chatbotProvider";
-import TechStackScroller from "@/components/tech-stack-scroller";
+import TechStackGrid from "@/components/tech-stack-grid";
 
 
 export default function Home() {
@@ -48,9 +48,9 @@ export default function Home() {
                     {/*    {" enthusiast"}*/}
                     {/*</p>*/}
                     <div className="space-y-4 text-gray-400">
-                        <p>i&apos;m ben 🧑🏾‍💻</p>
+                        <p>i&apos;m Ben 🧑🏾‍💻</p>
                         <p>
-                            i’m a software developer at{" "}
+                            a software developer at{" "}
                             <Link href="https://xpens.ai/" target="_blank" rel="noopener noreferrer" className="dotted-underline text-white">
                                 xpens.ai
                             </Link>
@@ -152,7 +152,7 @@ export default function Home() {
                 </div>
 
             <div className={'flex flex-col gap-5 lowercase'}>
-                <span className={'text-sm text-gray-400 uppercase'}>
+                <span className={'text-sm font-bold text-sky-300 uppercase'}>
                         {"EXPERIENCE"}
                     </span>
                 {
@@ -183,20 +183,24 @@ export default function Home() {
             {/* Projects */}
             <div className={'flex flex-col gap-5'}>
                 <div className={"flex justify-between items-center "}>
-                    <span className={'text-sm text-gray-400'}>
-                        {"PROJECTS"}
-                    </span>
+                    <div className="flex flex-col gap-1">
+                        <span className="text-sm font-bold text-sky-300">PROJECTS</span>
+                        <p className="text-sm text-gray-400">short stories about things i’ve built</p>
+                    </div>
                     <Link href={'/projects'}>
                         <ChevronRight color={"gray"} size={20} className={"hover:bg-gray-400/50 rounded-full transition-colors duration-150 cursor-pointer"}/>
 
                     </Link>
                 </div>
                 {
-                    projects.map((project, index) => {
+                    visibleProjects.map((project, index) => {
                         return (
                             <div key={index} className={"flex mb-2"}>
-                                <Link href={project.navigation_link} className={'flex flex-col lg:flex-row lg:items-center lg:gap-5 cursor-pointer group w-full'}>
-                                    <span className={'dotted-underline'}>
+                                <Link href={project.navigation_link} className="flex items-center gap-3 cursor-pointer group w-full lowercase">
+                                    <Image src={project.icon} alt="" width={28} height={28}
+                                           className="size-7 shrink-0 object-contain"/>
+                                    <div className="flex min-w-0 flex-1 flex-col lg:flex-row lg:items-center lg:gap-5">
+                                    <span>
                                         {project.title}
                                     </span>
                                     <span className={'text-gray-400'}>
@@ -209,6 +213,7 @@ export default function Home() {
                                         {project.date}
                                     </span>
                                     
+                                </div>
                                 </Link>
                             </div>
                         )
@@ -217,18 +222,21 @@ export default function Home() {
 
             </div>
 
-            <TechStackScroller tech_stack={tech_stack}/>
+            <TechStackGrid tech_stack={tech_stack}/>
 
             
 
             <div className={'flex flex-col gap-5'}>
-                <span className={'text-sm text-gray-400'}>
+                <span className={'text-sm font-bold text-sky-300'}>
                         {"EDUCATION"}
                 </span>
                 {
                     info.education.map((education, index) => {
                         return (
-                            <div key={index} className={"flex flex-col gap-1"}>
+                            <div key={index} className="flex items-center gap-3 lowercase">
+                                <Image src="/concordia-logo.png" alt="Concordia University logo"
+                                       width={28} height={28} className="size-7 shrink-0 object-contain"/>
+                                <div className="flex min-w-0 flex-col gap-1">
                                 <p>
                                     <Link
                                         href="https://www.concordia.ca/academics/undergraduate/computer-engineering.html"
@@ -236,7 +244,7 @@ export default function Home() {
                                         rel="noopener noreferrer"
                                         className="inline-flex items-center gap-1 cursor-pointer group"
                                     >
-                                    <span className="dotted-underline">
+                                    <span>
                                         {`${education.program} at ${education.institution}`}
                                     </span>
                                         <ArrowUpRight
@@ -251,6 +259,7 @@ export default function Home() {
                                 <p className={"text-sm text-gray-400"}>
                                     {education.location}
                                 </p>
+                                </div>
                             </div>
                         )
                     })

@@ -5,7 +5,7 @@ import Link from "next/link";
 import {useState} from "react";
 import {info_translations, tech_stack} from "@/utils/profile_info";
 import Image from "next/image";
-import TechStackScroller from "@/components/tech-stack-scroller";
+import TechStackGrid from "@/components/tech-stack-grid";
 import { useChatbot } from "@/components/chatbotProvider";
 
 export default function AboutPage() {
@@ -150,7 +150,7 @@ export default function AboutPage() {
                     })
                 }
             </div>
-            <TechStackScroller tech_stack={tech_stack}/>
+            <TechStackGrid tech_stack={tech_stack}/>
 
       
 

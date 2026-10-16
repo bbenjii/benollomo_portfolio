@@ -1,5 +1,5 @@
 export const projectCaseStudies = {
-    apollofi: {
+    nora: {
         problem: "Personal finance products often present fragmented provider data as if it were a trustworthy financial record. ApolloFi needed to normalize accounts and transactions first, preserve currency and ownership boundaries, and only then turn that evidence into useful dashboards and AI-assisted explanations.",
         role: "I own the product and work across discovery, financial modeling, interface design, backend services, AI orchestration, cloud infrastructure, testing, and deployment.",
         constraints: [
