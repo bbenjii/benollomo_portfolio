@@ -1,6 +1,6 @@
 "use client";
 
-import {ArrowRight, ArrowUpRight, BrainCircuit, ChevronRight, CloudCog, Landmark} from "lucide-react";
+import {ArrowRight, ArrowUpRight, BrainCircuit, Camera, ChevronRight, CloudCog, Landmark} from "lucide-react";
 import Image from "next/image";
 import {info_translations, visibleProjects, tech_stack} from "@/utils/profile_info";
 import Link from "next/link";
@@ -180,6 +180,17 @@ export default function Home() {
 
             </div>
             
+            <Link href="/photography" className="flex items-center justify-between gap-4 group">
+                <div>
+                    <span className="text-sm font-bold text-sky-300">PHOTOGRAPHY</span>
+                    <p className="mt-1 flex items-center gap-2 text-sm text-gray-400">
+                        <Camera size={16} className="shrink-0" aria-hidden="true"/>
+                        some photos that i like
+                    </p>
+                </div>
+                <ChevronRight size={20} className="text-gray-400 group-hover:text-white"/>
+            </Link>
+
             {/* Projects */}
             <div className={'flex flex-col gap-5'}>
                 <div className={"flex justify-between items-center "}>
