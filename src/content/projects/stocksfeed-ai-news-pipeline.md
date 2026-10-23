@@ -1,3 +1,7 @@
+![StocksFeedAI news feed with article summaries, ticker tags, and sentiment indicators](/case-studies/stocksfeed-ai/news-feed.png)
+![Amazon stock overview with a one-month price chart and news filters](/case-studies/stocksfeed-ai/amzn-price-history.png)
+![Amazon stock overview with its price history and related news articles](/case-studies/stocksfeed-ai/amzn-related-news.png)
+
 Last year, I started investing. After a couple of months of picking what I thought were the best companies (I was wrong and lost money btw), I settled on a few ETFs (basically baskets of stocks) covering different industries and invested in them regularly.
 
 I used [Questrade](https://www.questrade.com/), which had a stock news section. Even though I wasn't changing my strategy, I'd check my portfolio daily and research why it went up or down. I kept seeing connections between stock prices and real-world events: companies collaborating, CEOs or politicians tweeting, etc.
