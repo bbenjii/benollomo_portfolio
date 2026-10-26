@@ -22,9 +22,11 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 ## Photography
 
-`/photography` renders `src/data/photography.json` as a responsive gallery with a fullscreen viewer. The catalog contains public original/thumbnail URLs, dimensions, and editable titles and alt text. Images load directly from the existing S3 storage; no storage credentials or running ChronoFrame instance are required.
+The previous `/photography` route redirects permanently to `/pics`.
 
-The initial catalog is a snapshot of 146 photos from the local ChronoFrame database, excluding photos in hidden albums. Uploads, deletions, and visibility changes do not sync automatically: update the catalog and rebuild to change the portfolio selection. Captions and descriptive alt text can be edited in the same file. The `infoSections` field includes grouped EXIF details, file information, and capture dates. Photos with coordinates have a `location` field used for the OpenStreetMap preview. `public/photography-histograms.json` contains 128-bin RGB/luminance histograms calculated from the thumbnails; refresh it alongside the catalog when changing photos.
+`/pics` renders `src/data/photography.json` as a responsive gallery with a fullscreen viewer. The catalog contains public original/thumbnail URLs, dimensions, and editable titles and alt text. Images load directly from the existing S3 storage; no storage credentials or running ChronoFrame instance are required.
+
+The catalog is a snapshot of 123 photos from the local ChronoFrame database, refreshed on October 26, 2026, excluding photos in hidden albums. Uploads, deletions, and visibility changes do not sync automatically: update the catalog and rebuild to change the portfolio selection. Captions and descriptive alt text can be edited in the same file. The `infoSections` field includes grouped EXIF details, file information, and capture dates. Photos with coordinates have a `location` field used for the OpenStreetMap preview. `public/photography-histograms.json` contains 128-bin RGB/luminance histograms calculated from the thumbnails; refresh it alongside the catalog when changing photos.
 
 The gallery supports country, city, camera, and lens filters, plus capture-date, title, file-size sorting, and shuffle. The compact toolbar opens floating filter and sort panels. Category tabs support multiple selections (OR within a category, AND between categories), with photo-detail search and clear-all. The viewer stays within the displayed result set and order. Shuffle stays stable while toggling controls or filtering until you shuffle again. These selections reset on page reload.
 
